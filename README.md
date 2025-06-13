@@ -140,4 +140,4 @@ npx http-server
 
 ## License
 
-© 2024 Mindgrub. All rights reserved.
+© 2025 Mindgrub. All rights reserved.

@@ -543,7 +543,7 @@ const initFooter = () => {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Mindgrub. Empowering creativity with AI.</p>
+        <p>&copy; 2025 Mindgrub. Empowering creativity with AI.</p>
       </div>
     </div>
   `;
