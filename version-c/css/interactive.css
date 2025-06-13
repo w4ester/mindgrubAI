@@ -142,6 +142,21 @@ body::before {
   color: var(--text-primary);
 }
 
+.nav-link.active {
+  color: var(--accent-orange);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-orange);
+  border-radius: 2px;
+}
+
 .nav-cta {
   display: inline-flex;
   align-items: center;

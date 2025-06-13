@@ -329,6 +329,104 @@
                 font-size: 24px;
             }
         }
+        
+        /* Dark mode logo invert */
+        [data-theme="dark"] .logo-img {
+            filter: brightness(0) invert(1);
+        }
+        
+        /* Dark Theme Variables */
+        [data-theme="dark"] {
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --text-tertiary: #737373;
+            --bg-primary: #0A0A0A;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1A1A1A;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-orange: #F47114;
+            --accent-blue: #0EA5E9;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1000;
+        }
+        
+        .theme-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 12px 20px;
+            border-radius: 24px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .theme-toggle-btn:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .theme-toggle-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--accent-orange);
+        }
+        
+        .theme-label {
+            color: var(--text-secondary);
+        }
+        
+        /* Dark mode adjustments */
+        [data-theme="dark"] .version-card {
+            background: var(--bg-tertiary);
+            border-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .version-card:hover {
+            background: rgba(244, 113, 20, 0.05);
+        }
+        
+        [data-theme="dark"] .version-label {
+            background: rgba(244, 113, 20, 0.1);
+            border: 1px solid rgba(244, 113, 20, 0.2);
+        }
+        
+        [data-theme="dark"] .view-btn {
+            background: var(--accent-orange);
+        }
+        
+        [data-theme="dark"] .view-btn:hover {
+            background: #FF8C42;
+        }
+        
+        [data-theme="dark"] .info-section {
+            border-top-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .keyboard-tip {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+        }
+        
+        [data-theme="dark"] .keyboard-tip kbd {
+            background: var(--bg-secondary);
+            border-color: var(--border-color);
+        }
     </style>
 </head>
 <body>
@@ -336,7 +434,7 @@
         <!-- Header -->
         <header class="header">
             <div class="logo">
-                <img src="shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI">
+                <img src="shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI" class="logo-img">
             </div>
             <h1>Choose Your AI Experience</h1>
             <p class="tagline">Experience state-of-the-art AI models through three distinct interfaces</p>
@@ -421,7 +519,71 @@
         </section>
     </div>
 
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-toggle-icon" id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <!-- Sun icon (default for light mode) -->
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <span class="theme-label">Light</span>
+        </button>
+    </div>
+    
     <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeLabel = themeToggle.querySelector('.theme-label');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeToggle(currentTheme);
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeToggle(newTheme);
+        });
+        
+        function updateThemeToggle(theme) {
+            if (theme === 'dark') {
+                // Moon icon for dark mode
+                themeIcon.innerHTML = `
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                `;
+                themeLabel.textContent = 'Dark';
+            } else {
+                // Sun icon for light mode
+                themeIcon.innerHTML = `
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                `;
+                themeLabel.textContent = 'Light';
+            }
+        }
+        
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') window.location.href = 'version-a/index.html';

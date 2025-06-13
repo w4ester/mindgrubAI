@@ -98,10 +98,10 @@ const initFormHandler = () => {
     const form = document.getElementById('demo-form');
     
     if (form) {
-        // Replace with your Formspree endpoint
-        // Sign up at https://formspree.io to get your form ID
-        // For now, using a placeholder that will need to be replaced
-        form.action = 'https://formspree.io/f/YOUR_FORM_ID';
+        // Email service configuration
+        // Using local email server on port 2500
+        form.action = 'http://localhost:2500/api/schedule-demo';
+        form.method = 'POST';
         
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -140,14 +140,21 @@ ${data.message || 'No additional message provided'}
 Submitted from Mindgrub AI Website
             `;
             
-            // For demonstration, we'll simulate form submission
-            // In production, this would submit to Formspree or your email service
             try {
-                // Simulate API call
-                await new Promise(resolve => setTimeout(resolve, 2000));
+                // Submit to local email server
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
                 
-                // Show success message
-                form.innerHTML = `
+                const result = await response.json();
+                
+                if (result.success) {
+                    // Show success message
+                    form.innerHTML = `
                     <div class="form-success">
                         <div class="success-icon">✓</div>
                         <h3>Demo Scheduled Successfully!</h3>
@@ -157,11 +164,13 @@ Submitted from Mindgrub AI Website
                     </div>
                 `;
                 
-                // Log for testing (remove in production)
-                console.log('Form data:', data);
-                console.log('Email body:', emailBody);
+                    console.log('Email sent successfully!');
+                } else {
+                    throw new Error(result.message || 'Failed to send email');
+                }
                 
             } catch (error) {
+                console.error('Error:', error);
                 // Reset button state
                 submitBtn.disabled = false;
                 loader.style.display = 'none';

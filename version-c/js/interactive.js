@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDemo();
     initSmoothScroll();
     initMobileMenu();
+    initHeaderScroll();
 });
 
 // Chat functionality
@@ -190,10 +191,29 @@ const getOptimalUseCase = (creativity, speed, accuracy) => {
 
 // Smooth scrolling
 const initSmoothScroll = () => {
+    // Handle all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href');
+            
+            // Special handling for chat link
+            if (targetId === '#chat') {
+                // Scroll to top where chat is
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                // Focus on chat input after scrolling
+                setTimeout(() => {
+                    const chatInput = document.getElementById('user-input');
+                    if (chatInput) chatInput.focus();
+                }, 500);
+                return;
+            }
+            
+            // Regular section scrolling
+            const target = document.querySelector(targetId);
             if (target) {
                 const offset = 80;
                 const targetPosition = target.offsetTop - offset;
@@ -204,6 +224,32 @@ const initSmoothScroll = () => {
             }
         });
     });
+    
+    // Update active nav link based on scroll position
+    const updateActiveNav = () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    };
+    
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav(); // Initial check
 };
 
 // Mobile menu
@@ -215,6 +261,14 @@ const initMobileMenu = () => {
         toggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             toggle.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+            });
         });
     }
 };
@@ -264,3 +318,19 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Header scroll effect
+const initHeaderScroll = () => {
+    const header = document.querySelector('.header-interactive');
+    
+    const updateHeader = () => {
+        if (window.scrollY > 100) {
+            header?.classList.add('scrolled');
+        } else {
+            header?.classList.remove('scrolled');
+        }
+    };
+    
+    window.addEventListener('scroll', updateHeader);
+    updateHeader(); // Initial check
+};

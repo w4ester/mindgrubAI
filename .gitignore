@@ -1,0 +1,28 @@
+# Email server files (local only)
+email-server.js
+email-server-package.json
+start-email-server.sh
+start-website.sh
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Package lock files (optional)
+package-lock.json
+yarn.lock
