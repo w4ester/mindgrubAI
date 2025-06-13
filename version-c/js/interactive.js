@@ -152,7 +152,7 @@ const generateResponse = (input) => {
     const responses = [
         "That's a fascinating question! Based on my analysis with 95.8% accuracy on Mindgrub Sr, I can help you explore that topic in depth.",
         "Great question! Let me leverage my 4M token context window and 25ms latency to provide you with comprehensive insights.",
-        "I'd be happy to help with that! My enterprise-grade capabilities allow me to break down the most complex topics.",
+        "I'd be happy to help with that! My advanced capabilities allow me to break down the most complex topics.",
         "Interesting! As the flagship Mindgrub Sr model, I'll use my state-of-the-art processing to give you the best possible answer.",
         "Excellent inquiry! With my industry-leading performance on the Aider leaderboard, I can provide detailed assistance."
     ];

@@ -107,7 +107,7 @@ const initDemo = () => {
     // Simulate response
     setTimeout(() => {
       const responses = {
-        'mindgrub-sr': `I'm Mindgrub Sr with 95.8% accuracy on the Aider leaderboard. Your query about "${userMessage.substring(0, 30)}..." is interesting. With my 4M token context window and 25ms latency, I deliver enterprise-grade performance for complex analysis.`,
+        'mindgrub-sr': `I'm Mindgrub Sr with 95.8% accuracy on the Aider leaderboard. Your query about "${userMessage.substring(0, 30)}..." is interesting. With my 4M token context window and 25ms latency, I deliver high-performance results for complex analysis.`,
         'mindgrub-jr-think': `Mindgrub Jr Think here with 88.2% accuracy. Regarding "${userMessage.substring(0, 30)}...", I excel at deep reasoning tasks with my 2M context window and balanced 35ms response time.`,
         'mindgrub-jr': `Mindgrub Jr responding with 79.4% accuracy. For "${userMessage.substring(0, 30)}...", I provide fast, efficient responses with 128K context and 45ms latency for reliable performance.`
       };

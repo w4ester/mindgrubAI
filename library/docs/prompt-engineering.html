@@ -44,9 +44,9 @@
                     <span class="article-category">Best Practices</span>
                     <span class="article-date">January 2025</span>
                 </div>
-                <h1 class="article-title">Prompt Engineering: From Ad-hoc to Enterprise Scale</h1>
+                <h1 class="article-title">Prompt Engineering: From Ad-hoc to Production Scale</h1>
                 <p class="article-lead">
-                    Prompt engineering has evolved from ad-hoc "prompt tinkering" to a repeatable engineering discipline that lets teams steer large-language-model (LLM) behaviour quickly and cheaply—often without any model fine-tuning at all. Drawing on Lee Boonstra's enterprise guidance at Google and cross-vendor research from OpenAI, Microsoft, Anthropic, NIST and others, this white paper explains what prompt engineering is, why it matters, and how to institutionalise it safely and at scale.
+                    Prompt engineering has evolved from ad-hoc "prompt tinkering" to a repeatable engineering discipline that lets teams steer large-language-model (LLM) behaviour quickly and cheaply—often without any model fine-tuning at all. Drawing on industry guidance and cross-vendor research from leading AI researchers and standards organizations, this white paper explains what prompt engineering is, why it matters, and how to institutionalise it safely and at scale.
                 </p>
             </div>
 
@@ -120,7 +120,7 @@
                 </div>
                 
                 <p class="article-note">
-                    Boonstra also advocates embedding tone directives and fallback clauses ("If you are unsure, ask clarifying questions") to harden production chatbots.
+                    Best practices also advocate embedding tone directives and fallback clauses ("If you are unsure, ask clarifying questions") to harden production chatbots.
                 </p>
             </section>
 
@@ -134,7 +134,7 @@
 
                 <h3>3.2 Chain-of-Thought (CoT)</h3>
                 <p>
-                    Adding "think step-by-step" instructions can unlock complex reasoning. Anthropic reports large accuracy gains when Claude is allowed to deliberate before producing the final answer.
+                    Adding "think step-by-step" instructions can unlock complex reasoning. Research shows large accuracy gains when models are allowed to deliberate before producing the final answer.
                 </p>
 
                 <h3>3.3 Retrieval-Augmented Generation (RAG)</h3>
@@ -144,7 +144,7 @@
 
                 <h3>3.4 Prompt Chaining & Agentic Workflows</h3>
                 <p>
-                    Break multi-stage objectives into linked prompts—plan → gather → draft → refine—passing structured outputs between steps. Microsoft and Google documentation show higher factual fidelity and modular reuse with this pattern.
+                    Break multi-stage objectives into linked prompts—plan → gather → draft → refine—passing structured outputs between steps. Documentation shows higher factual fidelity and modular reuse with this pattern.
                 </p>
             </section>
 
@@ -239,7 +239,7 @@
 
                 <ul class="future-list">
                     <li>
-                        <strong>Multimodal Prompting</strong> – Gemini and similar vision-language models accept text + images (+ video) and benefit from two-stage "rationale then answer" multimodal CoT frameworks.
+                        <strong>Multimodal Prompting</strong> – Vision-language models accept text + images (+ video) and benefit from two-stage "rationale then answer" multimodal CoT frameworks.
                     </li>
                     <li>
                         <strong>Programmatic Prompt Optimisation</strong> – Evolutionary algorithms such as EvoPrompt automatically mutate and score prompt populations, outperforming human authors by up to 25% on BIG-Bench Hard tasks.
@@ -254,7 +254,7 @@
                 <h2>8. Conclusion</h2>
 
                 <p>
-                    Prompt engineering delivers substantial accuracy, safety and cost benefits when treated as a first-class engineering practice. By following Lee Boonstra's pragmatic techniques—grounded in cross-industry research on specificity, CoT, RAG and robust security controls—organisations can deploy trustworthy LLM solutions at speed. Store prompts in code, test them continuously, and monitor their real-world performance: the dividends are faster iteration cycles, lower inference costs and more reliable AI systems.
+                    Prompt engineering delivers substantial accuracy, safety and cost benefits when treated as a first-class engineering practice. By following these pragmatic techniques—grounded in cross-industry research on specificity, CoT, RAG and robust security controls—organisations can deploy trustworthy LLM solutions at speed. Store prompts in code, test them continuously, and monitor their real-world performance: the dividends are faster iteration cycles, lower inference costs and more reliable AI systems.
                 </p>
             </section>
 
