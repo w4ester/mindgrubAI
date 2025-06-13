@@ -465,6 +465,167 @@
         </div>
     </footer>
 
+    <!-- Schedule Demo Modal -->
+    <div id="schedule-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-content">
+                <h2 class="modal-title">Schedule Your Enterprise Demo</h2>
+                <p class="modal-subtitle">See how Mindgrub AI can transform your business</p>
+                
+                <!-- Progress Indicator -->
+                <div class="form-progress">
+                    <div class="progress-step active">
+                        <div class="progress-step-number">1</div>
+                        <div class="progress-step-label">Contact Info</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="progress-step-number">2</div>
+                        <div class="progress-step-label">Schedule</div>
+                    </div>
+                    <div class="progress-step">
+                        <div class="progress-step-number">3</div>
+                        <div class="progress-step-label">Details</div>
+                    </div>
+                </div>
+                
+                <form id="demo-form" class="demo-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <!-- Section 1: Contact Information -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <span class="form-section-icon">1</span>
+                            Contact Information
+                        </h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="first-name">
+                                    First Name
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" id="first-name" name="first_name" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">
+                                    Last Name
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                Work Email
+                                <span class="required">*</span>
+                                <span class="label-hint">We'll send confirmation here</span>
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@company.com" required>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="company">
+                                    Company
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="text" id="company" name="company" placeholder="Acme Corp" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="role">
+                                    Your Role
+                                    <span class="required">*</span>
+                                </label>
+                                <select id="role" name="role" required>
+                                    <option value="">Select your role</option>
+                                    <option value="C-Suite">C-Suite Executive</option>
+                                    <option value="VP/Director">VP/Director</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Developer">Developer/Engineer</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 2: Schedule -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <span class="form-section-icon">2</span>
+                            Select Date & Time
+                        </h3>
+                        <div class="form-group">
+                            <label for="date">
+                                Preferred Date
+                                <span class="required">*</span>
+                                <span class="label-hint">Next available: Tomorrow</span>
+                            </label>
+                            <input type="date" id="date" name="preferred_date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                Preferred Time (EST)
+                                <span class="required">*</span>
+                            </label>
+                            <div class="time-slots">
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="9:00 AM" required>
+                                    9:00 AM
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="10:00 AM">
+                                    10:00 AM
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="11:00 AM">
+                                    11:00 AM
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="1:00 PM">
+                                    1:00 PM
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="2:00 PM">
+                                    2:00 PM
+                                </label>
+                                <label class="time-slot">
+                                    <input type="radio" name="preferred_time" value="3:00 PM">
+                                    3:00 PM
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Section 3: Details -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">
+                            <span class="form-section-icon">3</span>
+                            Project Details
+                        </h3>
+                        <div class="form-group">
+                            <label for="message">
+                                What are you looking to achieve with AI?
+                                <span class="label-hint">Optional but helpful</span>
+                            </label>
+                            <textarea id="message" name="message" rows="4" placeholder="Example: We want to automate customer support, improve data analysis, or implement predictive analytics..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Hidden field for email routing -->
+                    <input type="hidden" name="_to" value="howdy@edinfinite.com">
+                    <input type="hidden" name="_subject" value="New Enterprise Demo Request - Mindgrub AI">
+                    
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        Schedule Demo
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+                    
+                    <p class="form-note">Your information is secure and will only be used for demo scheduling</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script type="module" src="js/corporate.js"></script>
 </body>

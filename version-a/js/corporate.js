@@ -1,193 +1,257 @@
-// Version A - Corporate/Professional JavaScript
-import { initCommon, animateCounter } from '../../shared/js/main.js';
+// Version A - Corporate Professional JavaScript
 
-// Initialize everything
 document.addEventListener('DOMContentLoaded', () => {
-  initCommon();
-  initROICalculator();
-  initSmoothScroll();
-  initAnimations();
+    initSmoothScroll();
+    initMobileMenu();
+    initScheduleModal();
+    initFormHandler();
 });
 
-// Initialize ROI Calculator
-const initROICalculator = () => {
-  const calculator = document.querySelector('.roi-calculator');
-  if (!calculator) return;
-
-  const inputs = calculator.querySelectorAll('input');
-  const calculateBtn = calculator.querySelector('button');
-  
-  const calculate = () => {
-    const revenue = parseFloat(document.getElementById('revenue')?.value || 10000000);
-    const employees = parseInt(document.getElementById('employees')?.value || 500);
-    const industry = document.getElementById('industry')?.value || 'Financial Services';
-    
-    // Industry multipliers
-    const industryMultipliers = {
-      'Financial Services': 1.3,
-      'Healthcare': 1.2,
-      'Retail': 1.1,
-      'Manufacturing': 1.0
-    };
-    
-    const multiplier = industryMultipliers[industry] || 1.0;
-    
-    // Calculate potential savings
-    const automationSavings = employees * 50000 * 0.35 * multiplier; // 35% of employee cost
-    const efficiencyGains = revenue * 0.08 * multiplier; // 8% revenue increase
-    const costReduction = revenue * 0.12 * multiplier; // 12% cost reduction
-    
-    const totalSavings = automationSavings + efficiencyGains + costReduction;
-    const efficiencyPercent = Math.round((efficiencyGains / revenue) * 100);
-    const paybackMonths = Math.round((revenue * 0.05) / (totalSavings / 12)); // 5% of revenue as investment
-    
-    // Update UI
-    updateROIDisplay(totalSavings, efficiencyPercent, paybackMonths);
-  };
-  
-  const updateROIDisplay = (savings, efficiency, payback) => {
-    const savingsEl = document.querySelector('.roi-metric:nth-child(1) .roi-value');
-    const efficiencyEl = document.querySelector('.roi-metric:nth-child(2) .roi-value');
-    const paybackEl = document.querySelector('.roi-metric:nth-child(3) .roi-value');
-    
-    if (savingsEl) {
-      const savingsInMillions = savings / 1000000;
-      savingsEl.textContent = `$${savingsInMillions.toFixed(1)}M`;
-    }
-    
-    if (efficiencyEl) {
-      efficiencyEl.textContent = `${efficiency}%`;
-    }
-    
-    if (paybackEl) {
-      paybackEl.textContent = `${payback} months`;
-    }
-    
-    // Add pulse animation
-    document.querySelectorAll('.roi-metric').forEach(metric => {
-      metric.style.animation = 'pulse 0.6s ease';
-      setTimeout(() => {
-        metric.style.animation = '';
-      }, 600);
-    });
-  };
-  
-  // Auto calculate on input change
-  inputs.forEach(input => {
-    input.addEventListener('input', calculate);
-  });
-  
-  if (calculateBtn) {
-    calculateBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      calculate();
-    });
-  }
-  
-  // Initial calculation
-  calculate();
-};
-
-// Smooth scroll for navigation links
+// Smooth scrolling for anchor links
 const initSmoothScroll = () => {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const offset = 100; // Account for fixed header
-        const targetPosition = target.offsetTop - offset;
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offset = 80; // Account for fixed header
+                const targetPosition = target.offsetTop - offset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
-      }
     });
-  });
 };
 
-// Initialize scroll animations
-const initAnimations = () => {
-  // Intersection Observer for fade-in animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        
-        // Animate counters
-        const counters = entry.target.querySelectorAll('[data-count]');
-        counters.forEach(counter => {
-          const target = parseInt(counter.getAttribute('data-count'));
-          animateCounter(counter, target, 2000);
+// Mobile menu toggle
+const initMobileMenu = () => {
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (toggle && navLinks) {
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
         });
-      }
-    });
-  }, observerOptions);
-  
-  // Observe all sections
-  document.querySelectorAll('section').forEach(section => {
-    section.classList.add('reveal');
-    observer.observe(section);
-  });
-  
-  // Observe all cards and grid items
-  const animatedElements = document.querySelectorAll('.model-card, .solution-card, .case-study, .tech-feature');
-  animatedElements.forEach((el, index) => {
-    el.style.transitionDelay = `${index * 100}ms`;
-    el.classList.add('reveal');
-    observer.observe(el);
-  });
-  
-  // Navbar background on scroll
-  const navbar = document.querySelector('.header-corporate');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-      navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    } else {
-      navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-      navbar.style.boxShadow = 'none';
     }
-  });
-  
-  // Mobile menu toggle
-  const mobileToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  
-  if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      mobileToggle.classList.toggle('active');
+};
+
+// Schedule Modal Handler
+const initScheduleModal = () => {
+    // Initialize time slot selection
+    initTimeSlots();
+    const modal = document.getElementById('schedule-modal');
+    const closeBtn = document.querySelector('.modal-close');
+    
+    // Get all buttons that should open the modal
+    const scheduleBtns = document.querySelectorAll(
+        'a[href="#contact"], a[href="#demo"], .btn-primary[href*="contact"], .btn-primary[href*="demo"]'
+    );
+    
+    // Open modal when clicking schedule buttons
+    scheduleBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
     });
-  }
-  
-  // Form submission
-  const demoForm = document.querySelector('#cta form');
-  if (demoForm) {
-    demoForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = demoForm.querySelector('button');
-      const originalText = btn.textContent;
-      
-      btn.textContent = 'Scheduling...';
-      btn.disabled = true;
-      
-      setTimeout(() => {
-        btn.textContent = 'Thank you! We\'ll contact you soon.';
-        btn.style.background = 'var(--mg-green)';
-        demoForm.reset();
+    
+    // Close modal when clicking close button
+    closeBtn?.addEventListener('click', closeModal);
+    
+    // Close modal when clicking outside
+    modal?.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal?.classList.contains('active')) {
+            closeModal();
+        }
+    });
+    
+    function openModal() {
+        modal?.classList.add('active');
+        document.body.style.overflow = 'hidden';
         
-        setTimeout(() => {
-          btn.textContent = originalText;
-          btn.disabled = false;
-          btn.style.background = '';
-        }, 3000);
-      }, 1500);
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+    }
+    
+    function closeModal() {
+        modal?.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
+
+// Form Handler with Email Integration
+const initFormHandler = () => {
+    const form = document.getElementById('demo-form');
+    
+    if (form) {
+        // Replace with your Formspree endpoint
+        // Sign up at https://formspree.io to get your form ID
+        // For now, using a placeholder that will need to be replaced
+        form.action = 'https://formspree.io/f/YOUR_FORM_ID';
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const loader = submitBtn.querySelector('.btn-loader');
+            const btnText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            loader.style.display = 'inline-block';
+            submitBtn.textContent = 'Scheduling...';
+            
+            // Collect form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Format the email content
+            const emailBody = `
+New Enterprise Demo Request
+
+Contact Information:
+- Name: ${data.first_name} ${data.last_name}
+- Email: ${data.email}
+- Company: ${data.company}
+- Role: ${data.role}
+
+Preferred Schedule:
+- Date: ${data.preferred_date}
+- Time: ${data.preferred_time}
+
+Message:
+${data.message || 'No additional message provided'}
+
+---
+Submitted from Mindgrub AI Website
+            `;
+            
+            // For demonstration, we'll simulate form submission
+            // In production, this would submit to Formspree or your email service
+            try {
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Show success message
+                form.innerHTML = `
+                    <div class="form-success">
+                        <div class="success-icon">✓</div>
+                        <h3>Demo Scheduled Successfully!</h3>
+                        <p>We've sent a confirmation to ${data.email}</p>
+                        <p>Our team will reach out within 24 hours to confirm your demo.</p>
+                        <button class="btn btn-outline" onclick="location.reload()">Schedule Another Demo</button>
+                    </div>
+                `;
+                
+                // Log for testing (remove in production)
+                console.log('Form data:', data);
+                console.log('Email body:', emailBody);
+                
+            } catch (error) {
+                // Reset button state
+                submitBtn.disabled = false;
+                loader.style.display = 'none';
+                submitBtn.textContent = btnText;
+                
+                // Show error message
+                alert('There was an error scheduling your demo. Please try again or contact us directly.');
+            }
+        });
+    }
+};
+
+// Add success message styles
+const style = document.createElement('style');
+style.textContent = `
+    .form-success {
+        text-align: center;
+        padding: 40px 0;
+    }
+    
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-orange) 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        margin: 0 auto 24px;
+    }
+    
+    .form-success h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: var(--gray-900);
+    }
+    
+    .form-success p {
+        color: var(--gray-600);
+        margin-bottom: 16px;
+    }
+    
+    .form-success .btn {
+        margin-top: 24px;
+    }
+    
+    @media (max-width: 768px) {
+        .form-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .modal-content {
+            padding: 32px 24px;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Time slot selection handler
+const initTimeSlots = () => {
+    const timeSlots = document.querySelectorAll('.time-slot');
+    
+    timeSlots.forEach(slot => {
+        slot.addEventListener('click', () => {
+            // Remove selected class from all slots
+            timeSlots.forEach(s => s.classList.remove('selected'));
+            // Add selected class to clicked slot
+            slot.classList.add('selected');
+            // Check the radio input
+            const radio = slot.querySelector('input[type="radio"]');
+            if (radio) radio.checked = true;
+        });
     });
-  }
+    
+    // Set today + 1 as minimum date
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowStr = tomorrow.toISOString().split('T')[0];
+        dateInput.setAttribute('min', tomorrowStr);
+        
+        // Update the hint text
+        const hint = document.querySelector('label[for="date"] .label-hint');
+        if (hint) {
+            const options = { weekday: 'long', month: 'short', day: 'numeric' };
+            hint.textContent = `Next available: ${tomorrow.toLocaleDateString('en-US', options)}`;
+        }
+    }
 };
