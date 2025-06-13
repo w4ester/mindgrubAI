@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Library | Mindgrub AI</title>
+    <meta name="description" content="Access comprehensive documentation, guides, and resources for Mindgrub AI models and prompt engineering best practices.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../shared/css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="library-header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="../index.html" class="nav-logo">
+                    <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub">
+                    <span>AI Knowledge</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#featured" class="nav-link">Featured</a>
+                    <a href="#guides" class="nav-link">Guides</a>
+                    <a href="#reference" class="nav-link">API Reference</a>
+                    <a href="#resources" class="nav-link">Resources</a>
+                    <div class="version-links">
+                        <span class="version-label">Versions:</span>
+                        <a href="../version-a/index.html" class="version-link">A</a>
+                        <a href="../version-b/index.html" class="version-link">B</a>
+                        <a href="../version-c/index.html" class="version-link">C</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Mindgrub AI Knowledge Library</h1>
+            <p class="hero-subtitle">Comprehensive guides, best practices, and resources for building with Mindgrub AI models</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search documentation..." id="search-input">
+                <button class="search-button" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Featured Guide</h2>
+            <article class="featured-article">
+                <div class="article-meta">
+                    <span class="article-category">Best Practices</span>
+                    <span class="article-date">January 2025</span>
+                </div>
+                <h3 class="article-title">Prompt Engineering: From Ad-hoc to Enterprise Scale</h3>
+                <div class="article-content">
+                    <p class="article-intro">
+                        Prompt engineering has evolved from ad-hoc "prompt tinkering" to a repeatable engineering discipline that lets teams steer large-language-model (LLM) behaviour quickly and cheaply—often without any model fine-tuning at all.
+                    </p>
+                    <a href="docs/prompt-engineering.html" class="article-link">
+                        Read full guide
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Guides Grid -->
+    <section id="guides" class="guides-section">
+        <div class="container">
+            <h2 class="section-title">Popular Guides</h2>
+            <div class="guides-grid">
+                <a href="docs/getting-started.html" class="guide-card">
+                    <div class="guide-icon">🚀</div>
+                    <h3>Getting Started</h3>
+                    <p>Quick start guide for Mindgrub AI models</p>
+                </a>
+                <a href="docs/model-comparison.html" class="guide-card">
+                    <div class="guide-icon">⚖️</div>
+                    <h3>Model Comparison</h3>
+                    <p>Compare Mindgrub Jr, Jr Think, and Sr models</p>
+                </a>
+                <a href="docs/api-integration.html" class="guide-card">
+                    <div class="guide-icon">🔌</div>
+                    <h3>API Integration</h3>
+                    <p>Integrate Mindgrub AI into your applications</p>
+                </a>
+                <a href="docs/best-practices.html" class="guide-card">
+                    <div class="guide-icon">✨</div>
+                    <h3>Best Practices</h3>
+                    <p>Optimize performance and accuracy</p>
+                </a>
+                <a href="docs/security.html" class="guide-card">
+                    <div class="guide-icon">🔒</div>
+                    <h3>Security Guide</h3>
+                    <p>Secure deployment and prompt injection defense</p>
+                </a>
+                <a href="docs/rag-implementation.html" class="guide-card">
+                    <div class="guide-icon">📚</div>
+                    <h3>RAG Implementation</h3>
+                    <p>Build retrieval-augmented generation systems</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Reference -->
+    <section id="reference" class="reference-section">
+        <div class="container">
+            <h2 class="section-title">API Reference</h2>
+            <div class="reference-grid">
+                <div class="reference-category">
+                    <h3>Core APIs</h3>
+                    <ul class="reference-list">
+                        <li><a href="#chat-completions">Chat Completions</a></li>
+                        <li><a href="#embeddings">Embeddings</a></li>
+                        <li><a href="#moderation">Moderation</a></li>
+                        <li><a href="#fine-tuning">Fine-tuning</a></li>
+                    </ul>
+                </div>
+                <div class="reference-category">
+                    <h3>SDKs & Libraries</h3>
+                    <ul class="reference-list">
+                        <li><a href="#python-sdk">Python SDK</a></li>
+                        <li><a href="#node-sdk">Node.js SDK</a></li>
+                        <li><a href="#rest-api">REST API</a></li>
+                        <li><a href="#cli">Command Line</a></li>
+                    </ul>
+                </div>
+                <div class="reference-category">
+                    <h3>Advanced Features</h3>
+                    <ul class="reference-list">
+                        <li><a href="#streaming">Streaming Responses</a></li>
+                        <li><a href="#functions">Function Calling</a></li>
+                        <li><a href="#vision">Vision API</a></li>
+                        <li><a href="#batch">Batch Processing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Additional Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>📖 Documentation</h3>
+                    <p>Comprehensive guides and tutorials</p>
+                    <a href="#docs" class="resource-link">Browse docs →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>💬 Community</h3>
+                    <p>Join our developer community</p>
+                    <a href="#community" class="resource-link">Join Discord →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>📰 Blog</h3>
+                    <p>Latest updates and insights</p>
+                    <a href="#blog" class="resource-link">Read blog →</a>
+                </div>
+                <div class="resource-card">
+                    <h3>🎓 Training</h3>
+                    <p>Workshops and certifications</p>
+                    <a href="#training" class="resource-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="library-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub" class="footer-logo">
+                    <p>Building the future with AI</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Library</h4>
+                    <a href="#guides">Guides</a>
+                    <a href="#reference">API Reference</a>
+                    <a href="#resources">Resources</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Versions</h4>
+                    <a href="../version-a/index.html">Corporate (A)</a>
+                    <a href="../version-b/index.html">Tech-Forward (B)</a>
+                    <a href="../version-c/index.html">Interactive (C)</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="#">GitHub</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindgrub Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/library.js"></script>
+</body>
+</html>
