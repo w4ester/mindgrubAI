@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindgrub AI - Interactive AI Platform | Experience the Future</title>
+    <meta name="description" content="Interact with cutting-edge AI models including Mindgrub Jr, Mindgrub Sr, and more. Experience the future of AI with Mindgrub's interactive platform.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../shared/css/reset.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mindgrub AI - Interactive AI Platform">
+    <meta property="og:description" content="Experience cutting-edge AI models through our interactive platform">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header-interactive">
+        <nav class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub">
+                <span>AI</span>
+            </a>
+            <div class="nav-links">
+                <a href="#playground" class="nav-link">Playground</a>
+                <a href="#models" class="nav-link">AI Models</a>
+                <a href="#demos" class="nav-link">Live Demos</a>
+                <a href="#create" class="nav-link">Create</a>
+                <a href="#" class="nav-cta">Chat Now!</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-interactive">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>🚀</span>
+                        <span>Powered by Aider Leaderboard Models</span>
+                    </div>
+                    <h1 class="hero-title">Your AI Companion</h1>
+                    <p class="hero-subtitle">
+                        Experience the power of state-of-the-art AI models. Chat, create, and explore
+                        with Mindgrub Sr, Mindgrub Jr Think, and more - all in one unified platform.
+                    </p>
+                    
+                    <!-- Interactive Chat -->
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            <h3>Try me out! Ask me anything:</h3>
+                            <div class="model-selector">
+                                <div class="model-chip active">Mindgrub Sr</div>
+                                <div class="model-chip">Mindgrub Jr Think</div>
+                                <div class="model-chip">Mindgrub Jr</div>
+                            </div>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message assistant">
+                                <div class="message-content">
+                                    👋 Hello! I'm powered by Mindgrub Sr. How can I help you explore AI today?
+                                </div>
+                            </div>
+                        </div>
+                        <form class="chat-input-container" id="chat-form">
+                            <input 
+                                type="text" 
+                                class="chat-input" 
+                                placeholder="Type your message..."
+                                id="user-input"
+                            >
+                            <button type="submit" class="send-button">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>AI Playground</h2>
+                    <p>Explore the possibilities with our interactive AI tools</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Multi-Model Chat</h3>
+                        <p>Compare responses from different AI models side by side in real-time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>AI Art Studio</h3>
+                        <p>Create stunning visuals with DALL-E 3, Midjourney, and Stable Diffusion.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎵</div>
+                        <h3>Music Generator</h3>
+                        <p>Compose original music and soundscapes with AI-powered tools.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📝</div>
+                        <h3>Code Assistant</h3>
+                        <p>Write, debug, and optimize code with AI pair programming.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>Research Helper</h3>
+                        <p>Analyze data, generate insights, and accelerate discoveries.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Game Creator</h3>
+                        <p>Build interactive games and experiences with AI assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Models Showcase -->
+        <section id="models" class="models-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2>State-of-the-Art Models</h2>
+                    <p>Access the most advanced AI models from the Aider leaderboard</p>
+                </div>
+                <div class="models-grid">
+                    <div class="model-showcase-card">
+                        <div class="model-logo">SR</div>
+                        <h3 class="model-name">Mindgrub Sr</h3>
+                        <div class="model-accuracy">95.8%</div>
+                        <p class="model-description">Enterprise flagship model - 4M context, 25ms</p>
+                    </div>
+                    <div class="model-showcase-card">
+                        <div class="model-logo">JT</div>
+                        <h3 class="model-name">Mindgrub Jr Think</h3>
+                        <div class="model-accuracy">88.2%</div>
+                        <p class="model-description">Deep reasoning variant - 2M context, 35ms</p>
+                    </div>
+                    <div class="model-showcase-card">
+                        <div class="model-logo">JR</div>
+                        <h3 class="model-name">Mindgrub Jr</h3>
+                        <div class="model-accuracy">79.4%</div>
+                        <p class="model-description">Fast, efficient model - 128K context, 45ms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section id="demo" class="demo-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live Demo</h2>
+                    <p>Experience AI in action with our interactive demonstration</p>
+                </div>
+                <div class="demo-container">
+                    <div class="demo-controls">
+                        <h3>AI Parameters</h3>
+                        <div class="control-group">
+                            <label for="creativity">Creativity Level</label>
+                            <input type="range" id="creativity" class="slider" min="0" max="100" value="70">
+                            <span class="value">70%</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="speed">Response Speed</label>
+                            <input type="range" id="speed" class="slider" min="0" max="100" value="85">
+                            <span class="value">85%</span>
+                        </div>
+                        <div class="control-group">
+                            <label for="accuracy">Accuracy Focus</label>
+                            <input type="range" id="accuracy" class="slider" min="0" max="100" value="90">
+                            <span class="value">90%</span>
+                        </div>
+                    </div>
+                    <div class="demo-output">
+                        <div class="output-header">
+                            <h3>AI Output</h3>
+                            <span class="status">Ready</span>
+                        </div>
+                        <div class="output-content" id="demo-output">
+                            Adjust the parameters to see how AI behavior changes in real-time...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Start Your AI Journey</h2>
+                    <p>Join thousands of users exploring the future of artificial intelligence</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">
+                            Get Started Free
+                            <span>→</span>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            View Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-interactive">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub">
+                    <p>Empowering innovation through cutting-edge AI technology. Experience the future today.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <a href="#">AI Playground</a>
+                    <a href="#">Model Library</a>
+                    <a href="#">API Access</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Community</a>
+                    <a href="#">Support</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mindgrub Technologies. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/interactive.js"></script>
+</body>
+</html>

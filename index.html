@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindgrub AI - Choose Your Experience | Mindgrub Jr, Mindgrub Sr, Top Models</title>
+    <meta name="description" content="Experience state-of-the-art AI models through three distinct interfaces. Explore Mindgrub Jr, Mindgrub Sr, and top-performing models with Mindgrub AI.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="shared/images/useMindgrubLogoFooter.svg">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="shared/css/reset.css">
+    
+    <style>
+        :root {
+            --text-primary: #171717;
+            --text-secondary: #525252;
+            --text-tertiary: #737373;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #FAFAFA;
+            --bg-tertiary: #F5F5F5;
+            --border-color: #E5E5E5;
+            --accent-orange: #F47114;
+            --accent-blue: #0EA5E9;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Text Selection Styles */
+        ::selection {
+            background: rgba(244, 113, 20, 0.25);
+            color: var(--text-primary);
+        }
+        
+        ::-moz-selection {
+            background: rgba(244, 113, 20, 0.25);
+            color: var(--text-primary);
+        }
+        
+        .version-card ::selection {
+            background: rgba(244, 113, 20, 0.3);
+            color: var(--text-primary);
+        }
+        
+        .version-card ::-moz-selection {
+            background: rgba(244, 113, 20, 0.3);
+            color: var(--text-primary);
+        }
+        
+        /* Make sure text remains visible when selected */
+        .version-card h3::selection,
+        .version-card .version-title::selection,
+        .version-card .version-subtitle::selection {
+            background: rgba(244, 113, 20, 0.2);
+            color: var(--text-primary) !important;
+        }
+        
+        .version-card h3::-moz-selection,
+        .version-card .version-title::-moz-selection,
+        .version-card .version-subtitle::-moz-selection {
+            background: rgba(244, 113, 20, 0.2);
+            color: var(--text-primary) !important;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .logo {
+            margin-bottom: 40px;
+        }
+        
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .tagline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+        
+        .version-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 48px 32px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .version-card:hover {
+            border-color: var(--accent-orange);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+        
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .version-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .version-label {
+            width: 56px;
+            height: 56px;
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin-bottom: 24px;
+        }
+        
+        .version-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .version-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+        
+        .version-description {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .version-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .version-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .version-features li::before {
+            content: '→';
+            color: var(--accent-orange);
+            margin-right: 12px;
+            font-weight: 600;
+        }
+        
+        .view-btn {
+            display: inline-block;
+            background: var(--text-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        
+        .view-btn:hover {
+            background: var(--accent-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(244, 113, 20, 0.3);
+        }
+        
+        /* Info Section */
+        .info-section {
+            text-align: center;
+            padding-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .info-section h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .info-section p {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .info-item {
+            text-align: center;
+        }
+        
+        .info-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .info-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .keyboard-tip {
+            background: var(--bg-tertiary);
+            padding: 16px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .keyboard-tip kbd {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 12px;
+            margin: 0 4px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 18px;
+            }
+            
+            .version-card {
+                padding: 32px 24px;
+            }
+            
+            .version-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI">
+            </div>
+            <h1>Choose Your AI Experience</h1>
+            <p class="tagline">Experience state-of-the-art AI models through three distinct interfaces</p>
+        </header>
+
+        <!-- Version Cards -->
+        <div class="cards-grid">
+            <!-- Version A -->
+            <a href="version-a/index.html" class="version-card">
+                <div class="version-label">A</div>
+                <h2 class="version-title">Corporate Professional</h2>
+                <p class="version-subtitle">Enterprise AI Solutions</p>
+                <p class="version-description">Clean, trustworthy design showcasing Mindgrub Jr, Mindgrub Sr, and top models for business transformation.</p>
+                <ul class="version-features">
+                    <li>Executive dashboards & KPIs</li>
+                    <li>ROI calculator with real metrics</li>
+                    <li>Enterprise case studies</li>
+                    <li>Glass morphism design</li>
+                </ul>
+                <span class="view-btn">View Version A</span>
+            </a>
+
+            <!-- Version B -->
+            <a href="version-b/index.html" class="version-card">
+                <div class="version-label">B</div>
+                <h2 class="version-title">Tech-Forward Modern</h2>
+                <p class="version-subtitle">Cutting-Edge AI Technology</p>
+                <p class="version-description">Clean, modern design with API documentation and developer tools for Mindgrub Jr, Mindgrub Sr, and more.</p>
+                <ul class="version-features">
+                    <li>API documentation</li>
+                    <li>Live performance metrics</li>
+                    <li>Interactive code playground</li>
+                    <li>Developer resources</li>
+                </ul>
+                <span class="view-btn">View Version B</span>
+            </a>
+
+            <!-- Version C -->
+            <a href="version-c/index.html" class="version-card">
+                <div class="version-label">C</div>
+                <h2 class="version-title">Interactive Engaging</h2>
+                <p class="version-subtitle">AI Playground Experience</p>
+                <p class="version-description">Playful interface with live chat, AI art generation, and hands-on demos with all models.</p>
+                <ul class="version-features">
+                    <li>Multi-model chat interface</li>
+                    <li>AI art & music generators</li>
+                    <li>Rainbow gradients & animations</li>
+                    <li>Gamified experiences</li>
+                </ul>
+                <span class="view-btn">View Version C</span>
+            </a>
+        </div>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <h3>About This Demo</h3>
+            <p>Each version showcases state-of-the-art AI models with different design approaches.</p>
+            <p style="color: #999; font-size: 14px;">Built with vanilla HTML, CSS, and JavaScript. Zero dependencies. Maximum performance.</p>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-number">3</span>
+                    <span class="info-label">Unique Versions</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-number">100%</span>
+                    <span class="info-label">Responsive</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-number">0</span>
+                    <span class="info-label">Dependencies</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-number">100%</span>
+                    <span class="info-label">Professional</span>
+                </div>
+            </div>
+
+            <div class="keyboard-tip">
+                <strong>Pro Tip:</strong> Press <kbd>1</kbd>, <kbd>2</kbd>, or <kbd>3</kbd> to quickly switch between versions.
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '1') window.location.href = 'version-a/index.html';
+            if (e.key === '2') window.location.href = 'version-b/index.html';
+            if (e.key === '3') window.location.href = 'version-c/index.html';
+        });
+
+        // Smooth page load
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.4s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
