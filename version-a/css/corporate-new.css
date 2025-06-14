@@ -1597,3 +1597,32 @@ body::before {
     gap: 32px;
   }
 }
+
+/* Keyboard Navigation Hint */
+.keyboard-hint {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-in;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.keyboard-hint kbd {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: monospace;
+  margin: 0 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
