@@ -45,6 +45,11 @@
         </nav>
     </header>
 
+    <!-- Keyboard Navigation Hint -->
+    <div class="keyboard-hint">
+        <span>Pro Tip: Press <kbd>1</kbd>, <kbd>2</kbd>, or <kbd>3</kbd> to quickly switch between versions</span>
+    </div>
+
     <main>
         <!-- Hero Section -->
         <section class="hero-tech">
@@ -375,5 +380,18 @@ console.log(response.text);</code></pre>
 
     <!-- JavaScript -->
     <script type="module" src="js/modern.js"></script>
+    
+    <!-- Keyboard Navigation -->
+    <script>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') {
+                window.location.href = '../version-a/';
+            } else if (e.key === '2') {
+                window.location.href = '../version-b/';
+            } else if (e.key === '3') {
+                window.location.href = '../version-c/';
+            }
+        });
+    </script>
 </body>
 </html>
