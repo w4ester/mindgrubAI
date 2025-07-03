@@ -1,0 +1,14 @@
+:root{
+  --mg-green:#00d26a;
+  --mg-amber:#ffb000;
+  --mg-red:#d73a49;
+}
+.on    {background:var(--mg-green);color:#000;font-weight:600}
+.amber {background:var(--mg-amber);color:#000;font-weight:600}
+.new   {background:#009dff;color:#fff;font-weight:600}
+table{
+  width:90%;margin:auto;border-collapse:collapse;font-size:0.9em
+}
+table td,table th{border:1px solid #444;padding:6px 8px;text-align:center}
+.note{font-size:0.7em;opacity:0.8;margin-top:8px}
+.reveal h1,.reveal h2{color:#00d26a}
