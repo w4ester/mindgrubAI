@@ -9,304 +9,563 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="../shared/css/reset.css">
-    <link rel="stylesheet" href="../shared/css/global.css">
-    <link rel="stylesheet" href="css/presentation.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mg-green': '#00d26a',
+                        'mg-amber': '#ffb000',
+                        'mg-blue': '#009dff',
+                        'mg-dark': '#0a0a0a',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #00d26a40; }
+            to { box-shadow: 0 0 30px #00d26a80; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-x-hidden">
+    
     <!-- Header -->
-    <header class="header-presentation">
-        <nav class="container nav-container">
-            <a href="../index.html" class="nav-logo">
-                <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI">
-                <span>AI Works</span>
-            </a>
-            <div class="nav-links">
-                <a href="#revenue" class="nav-link">Revenue</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#compensation" class="nav-link">Package</a>
-                <a href="#next-steps" class="nav-link">Next Steps</a>
+    <header class="fixed top-0 w-full z-50 glass-dark">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-3 group">
+                    <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI" class="h-8 w-auto filter brightness-0 invert group-hover:scale-110 transition-transform">
+                    <span class="text-xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">AI Works</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#revenue" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Revenue</a>
+                    <a href="#team" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Team</a>
+                    <a href="#compensation" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Package</a>
+                    <a href="#next-steps" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Next Steps</a>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <h1>AI Works @ Mindgrub</h1>
-            <p class="hero-subtitle">Prompt‑to‑Product • Tier III Delivery • Audit Practice</p>
-            <p class="meeting-info">Executive Presentation for Todd — July 3, 2025</p>
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-mg-green/20 via-mg-blue/10 to-purple-900/20"></div>
+        <div class="absolute top-20 left-20 w-72 h-72 bg-mg-green/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-mg-blue/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+        
+        <div class="relative z-10 text-center px-6 animate-slide-up">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-mg-green via-mg-blue to-mg-green bg-clip-text text-transparent">
+                AI Works
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-light mb-4 text-gray-300">@ Mindgrub</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8 text-lg md:text-xl text-gray-400">
+                <span class="px-4 py-2 glass rounded-full">Prompt‑to‑Product</span>
+                <span class="px-4 py-2 glass rounded-full">Tier III Delivery</span>
+                <span class="px-4 py-2 glass rounded-full">Audit Practice</span>
+            </div>
+            <p class="text-mg-green text-lg font-semibold animate-glow">Executive Presentation for Todd — July 3, 2025</p>
         </div>
     </section>
 
     <!-- Momentum Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Momentum 🟢</h2>
-            <div class="table-wrapper">
-                <table class="status-table">
-                    <thead>
-                        <tr>
-                            <th>Focus</th>
-                            <th>KPI</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Services & Pricing doc</td>
-                            <td>15 Jul</td>
-                            <td class="status-on">On</td>
-                        </tr>
-                        <tr>
-                            <td>Website content draft</td>
-                            <td>30 Jul</td>
-                            <td class="status-on">On</td>
-                        </tr>
-                        <tr>
-                            <td>mindgrub.ai launch</td>
-                            <td>08 Aug</td>
-                            <td class="status-on">On</td>
-                        </tr>
-                        <tr>
-                            <td>Brand kit</td>
-                            <td>08 Aug</td>
-                            <td class="status-amber">Amber</td>
-                        </tr>
-                        <tr>
-                            <td>GTM / enablement</td>
-                            <td>08 Aug</td>
-                            <td class="status-new">New</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="note">Green = complete/on‑track • Amber = needs resource • New = just added</p>
-        </div>
-    </section>
-
-    <!-- Revenue Section -->
-    <section id="revenue" class="content-section">
-        <div class="container">
-            <h2>FY‑25 Revenue Map</h2>
-            <div class="revenue-grid">
-                <div class="revenue-table-wrapper">
-                    <table class="revenue-table">
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Momentum 🟢
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">All systems firing on all cylinders</p>
+            
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
                         <thead>
-                            <tr>
-                                <th>Line of Work</th>
-                                <th>Unit $</th>
-                                <th>Deals</th>
-                                <th>Top‑line</th>
+                            <tr class="border-b border-gray-600">
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Focus</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">KPI</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Status</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tier III AI sites</td>
-                                <td>$25–50 K</td>
-                                <td>20</td>
-                                <td>$800 K</td>
+                        <tbody class="divide-y divide-gray-700">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Services & Pricing doc</td>
+                                <td class="py-4 px-6 text-gray-400">15 Jul</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">On Track</span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>AI Audits</td>
-                                <td>$15 K</td>
-                                <td>10</td>
-                                <td>$150 K</td>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Website content draft</td>
+                                <td class="py-4 px-6 text-gray-400">30 Jul</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">On Track</span>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Retainers</td>
-                                <td>$5 K/mo</td>
-                                <td>4×3 mo</td>
-                                <td>$60 K</td>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">mindgrub.ai launch</td>
+                                <td class="py-4 px-6 text-gray-400">08 Aug</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">On Track</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Brand kit</td>
+                                <td class="py-4 px-6 text-gray-400">08 Aug</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-amber text-black rounded-full font-semibold text-sm">Needs Resource</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">GTM / enablement</td>
+                                <td class="py-4 px-6 text-gray-400">08 Aug</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-blue text-white rounded-full font-semibold text-sm">New</span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="chart-wrapper">
-                    <canvas id="revPie" width="260" height="260"></canvas>
+                <p class="text-center text-gray-400 text-sm mt-6">Green = complete/on‑track • Amber = needs resource • New = just added</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Section -->
+    <section id="revenue" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                FY‑25 Revenue Map
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Conservative projections with massive upside</p>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-8">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-600">
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Line of Work</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Unit $</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Deals</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Top‑line</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-700">
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">Tier III AI sites</td>
+                                    <td class="py-4 text-mg-green font-semibold">$25–50K</td>
+                                    <td class="py-4">20</td>
+                                    <td class="py-4 text-mg-green font-bold">$800K</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">AI Audits</td>
+                                    <td class="py-4 text-mg-blue font-semibold">$15K</td>
+                                    <td class="py-4">10</td>
+                                    <td class="py-4 text-mg-blue font-bold">$150K</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">Retainers</td>
+                                    <td class="py-4 text-mg-amber font-semibold">$5K/mo</td>
+                                    <td class="py-4">4×3 mo</td>
+                                    <td class="py-4 text-mg-amber font-bold">$60K</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="glass rounded-2xl p-8 w-full max-w-md">
+                        <canvas id="revPie" width="300" height="300" class="mx-auto"></canvas>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-2xl text-gray-400 mb-2">Conservative forecast</p>
+                        <p class="text-6xl font-black bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">$1M</p>
+                    </div>
                 </div>
             </div>
-            <p class="revenue-total">Conservative forecast ≈ <strong>$1 M</strong></p>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="content-section">
-        <div class="container">
-            <h2>Core AI Works Squad (4)</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Will F.</h3>
-                    <p>Product strategy, tooling, audits</p>
+    <section id="team" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Core AI Works Squad
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">4 experts ready to execute</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-green to-mg-blue rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        W
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-green">Will F.</h3>
+                    <p class="text-gray-400 text-sm">Product strategy, tooling, audits</p>
                 </div>
-                <div class="team-member">
-                    <h3>Mo A.</h3>
-                    <p>Ops & offerings</p>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-blue to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        M
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-blue">Mo A.</h3>
+                    <p class="text-gray-400 text-sm">Ops & offerings</p>
                 </div>
-                <div class="team-member">
-                    <h3>Sadie M.</h3>
-                    <p>Branding & marketing</p>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-amber to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        S
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-amber">Sadie M.</h3>
+                    <p class="text-gray-400 text-sm">Branding & marketing</p>
                 </div>
-                <div class="team-member">
-                    <h3>Jacob N.</h3>
-                    <p>Engineering (stack & agents)</p>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-mg-green rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        J
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-purple-400">Jacob N.</h3>
+                    <p class="text-gray-400 text-sm">Engineering (stack & agents)</p>
                 </div>
             </div>
-            <p class="team-note">+ contractor roster ready for surge work.</p>
+            
+            <p class="text-center text-gray-400 mt-8 italic">+ contractor roster ready for surge work</p>
         </div>
     </section>
 
     <!-- Toolkit Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2>WordPress AI Toolkit<br><small>(ready to license)</small></h2>
-            <div class="toolkit-grid">
-                <div class="toolkit-item">
-                    <h3>MCP Server Toolkit</h3>
-                    <p>REST mastery + static export</p>
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                WordPress AI Toolkit
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">(ready to license)</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-green/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-green">MCP Server Toolkit</h3>
+                    <p class="text-gray-400">REST mastery + static export</p>
                 </div>
-                <div class="toolkit-item">
-                    <h3>AI Agent Site Generator</h3>
-                    <p>9 vertical templates</p>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-blue/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-blue">AI Agent Site Generator</h3>
+                    <p class="text-gray-400">9 vertical templates</p>
                 </div>
-                <div class="toolkit-item">
-                    <h3>GMMB Extensions</h3>
-                    <p>Bot wizard, WP ↔ static sync</p>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-amber/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-amber">GMMB Extensions</h3>
+                    <p class="text-gray-400">Bot wizard, WP ↔ static sync</p>
                 </div>
-                <div class="toolkit-item">
-                    <h3>Multi‑Model Manager</h3>
-                    <p>GPT‑4 / Claude / Qwen</p>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-400">Multi‑Model Manager</h3>
+                    <p class="text-gray-400">GPT‑4 / Claude / Qwen</p>
                 </div>
-                <div class="toolkit-item">
-                    <h3>Creator Tools + Content Scripts</h3>
-                    <p>Speed to "wow"</p>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform lg:col-span-2">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">✨</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">Creator Tools + Content Scripts</h3>
+                    <p class="text-gray-400">Speed to "wow"</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Schedule Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2>How I Cover Both Roles</h2>
-            <div class="table-wrapper">
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th>MSDE</th>
-                            <th>Mindgrub</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mon / Thu / Fri</td>
-                            <td>7:30–3:30 (remote)</td>
-                            <td>3:45–7 + evening</td>
-                        </tr>
-                        <tr>
-                            <td>Tue / Wed</td>
-                            <td>On‑site</td>
-                            <td>6 – 9 pm (code/strategy)</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Dual Role Coverage
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">How I balance both positions effectively</p>
+            
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Day</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">MSDE</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Mindgrub</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-700">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Mon / Thu / Fri</td>
+                                <td class="py-4 px-6 text-mg-amber">7:30–3:30 (remote)</td>
+                                <td class="py-4 px-6 text-mg-green">3:45–7 + evening</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Tue / Wed</td>
+                                <td class="py-4 px-6 text-mg-amber">On‑site</td>
+                                <td class="py-4 px-6 text-mg-green">6 – 9 pm (code/strategy)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center text-gray-400 text-sm mt-6">Separate devices • hours logged • ethics pre‑cleared</p>
             </div>
-            <p class="note">Separate devices • hours logged • ethics pre‑cleared.</p>
         </div>
     </section>
 
     <!-- Compensation Section -->
-    <section id="compensation" class="content-section">
-        <div class="container">
-            <h2>Fair‑Value Package</h2>
-            <div class="compensation-intro">
-                <p>MSDE pension/health gap (PV) ≈ <strong>$725 K</strong></p>
-                <p>=> Needs $120 K/yr premium over $131 K salary</p>
+    <section id="compensation" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Fair‑Value Package
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Compensation aligned with value creation</p>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="glass rounded-2xl p-8 text-center">
+                    <p class="text-xl mb-2">MSDE pension/health gap (PV) ≈ <span class="text-3xl font-bold text-mg-green">$725K</span></p>
+                    <p class="text-gray-400">=> Needs $120K/yr premium over $131K salary</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center py-4 border-b border-gray-700">
+                                <span class="text-xl font-semibold text-mg-green">Base</span>
+                                <span class="text-2xl font-bold">$250K</span>
+                            </div>
+                            <div class="flex justify-between items-center py-4 border-b border-gray-700">
+                                <span class="text-xl font-semibold text-mg-blue">Bonus (20%)</span>
+                                <span class="text-2xl font-bold">$50K target</span>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center py-4 border-b border-gray-700">
+                                <span class="text-xl font-semibold text-mg-amber">Sign‑on / RSUs</span>
+                                <span class="text-2xl font-bold">$125K (2‑yr vest)</span>
+                            </div>
+                            <div class="flex justify-between items-center py-4 border-b border-gray-700">
+                                <span class="text-xl font-semibold text-purple-400">Benefits</span>
+                                <span class="text-lg">100% family health • 5% 401(k) match</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-gray-400 text-sm mt-8">Falls mid‑band for AI leadership; tied to $1M plan</p>
+                </div>
             </div>
-            <div class="table-wrapper">
-                <table class="compensation-table">
-                    <tbody>
-                        <tr>
-                            <th>Base</th>
-                            <td>$250 K</td>
-                        </tr>
-                        <tr>
-                            <th>Bonus (20%)</th>
-                            <td>$50 K target</td>
-                        </tr>
-                        <tr>
-                            <th>Sign‑on / RSUs</th>
-                            <td>$125 K (2‑yr vest)</td>
-                        </tr>
-                        <tr>
-                            <th>Benefits</th>
-                            <td>100% family health • 5% 401(k) match</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="note">Falls mid‑band for AI leadership; tied to $1 M plan.</p>
         </div>
     </section>
 
     <!-- Next Steps Section -->
-    <section id="next-steps" class="content-section">
-        <div class="container">
-            <h2>Next Steps</h2>
-            <div class="steps-list">
-                <div class="step-item">
-                    <span class="step-number">1</span>
-                    <div class="step-content">
-                        <h3>Approve package & 20 hr/wk contract</h3>
-                        <p>today</p>
+    <section id="next-steps" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Next Steps
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Clear path to execution</p>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">1</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Approve package & 20 hr/wk contract</h3>
+                        <p class="text-mg-green font-semibold">today</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">2</span>
-                    <div class="step-content">
-                        <h3>Toolkit → MG repo</h3>
-                        <p>Mon 8 Jul</p>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-blue to-purple-500 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">2</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Toolkit → MG repo</h3>
+                        <p class="text-mg-blue font-semibold">Mon 8 Jul</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">3</span>
-                    <div class="step-content">
-                        <h3>mindgrub.ai live</h3>
-                        <p>08 Aug</p>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-amber to-orange-500 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">3</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">mindgrub.ai live</h3>
+                        <p class="text-mg-amber font-semibold">08 Aug</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">4</span>
-                    <div class="step-content">
-                        <h3>First paid Audit</h3>
-                        <p>01 Sep</p>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-mg-green rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">4</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">First paid Audit</h3>
+                        <p class="text-purple-400 font-semibold">01 Sep</p>
                     </div>
                 </div>
-                <div class="step-item">
-                    <span class="step-number">5</span>
-                    <div class="step-content">
-                        <h3>20 Tier III wins</h3>
-                        <p>by 31 Dec</p>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">5</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">20 Tier III wins</h3>
+                        <p class="text-mg-green font-semibold">by 31 Dec</p>
                     </div>
                 </div>
             </div>
-            <div class="cta-section">
-                <h3>Ready to green‑light?</h3>
+            
+            <div class="text-center mt-16">
+                <div class="glass rounded-2xl p-12 max-w-md mx-auto animate-glow">
+                    <h3 class="text-4xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-4">
+                        Ready to green‑light?
+                    </h3>
+                    <p class="text-2xl">🚀</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>Let's GrOw! 🚀</p>
+    <footer class="py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h3 class="text-6xl font-black bg-gradient-to-r from-mg-green via-mg-blue to-mg-green bg-clip-text text-transparent mb-4">
+                Let's GrOw!
+            </h3>
+            <p class="text-gray-400 text-lg">The future of AI is here. Let's build it together.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
-    <script src="js/presentation.js"></script>
+    <script>
+        // Revenue Pie Chart with beautiful styling
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('revPie');
+            if (!ctx) return;
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tier III Sites', 'AI Audits', 'Retainers'],
+                    datasets: [{
+                        data: [800, 150, 60],
+                        backgroundColor: [
+                            'rgba(0, 210, 106, 0.8)',
+                            'rgba(0, 157, 255, 0.8)', 
+                            'rgba(255, 176, 0, 0.8)'
+                        ],
+                        borderColor: [
+                            '#00d26a',
+                            '#009dff',
+                            '#ffb000'
+                        ],
+                        borderWidth: 3,
+                        hoverBorderWidth: 5,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 25,
+                                font: {
+                                    size: 14,
+                                    weight: '600'
+                                },
+                                color: '#fff',
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: '#00d26a',
+                            borderWidth: 1,
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: $${value}K (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '40%'
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
