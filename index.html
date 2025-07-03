@@ -726,14 +726,6 @@
             if (e.key === 'p' || e.key === 'P') window.location.href = 'presentation/index.html';
         });
 
-        // Smooth page load
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.4s ease';
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-        });
     </script>
 </body>
 </html>
