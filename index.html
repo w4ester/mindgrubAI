@@ -434,6 +434,102 @@
             background: var(--bg-secondary);
             border-color: var(--border-color);
         }
+        
+        /* Quick Access Links */
+        .quick-access {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .quick-access h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .quick-access-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .quick-access-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 24px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quick-access-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--accent-orange), var(--accent-blue));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .quick-access-btn:hover::before {
+            opacity: 0.1;
+        }
+        
+        .quick-access-btn:hover {
+            border-color: var(--accent-orange);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: var(--accent-orange);
+        }
+        
+        .quick-access-btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Dark mode adjustments */
+        [data-theme="dark"] .quick-access {
+            border-top-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .quick-access-btn {
+            background: var(--bg-tertiary);
+            border-color: var(--border-color);
+        }
+        
+        [data-theme="dark"] .quick-access-btn:hover {
+            background: rgba(244, 113, 20, 0.1);
+            border-color: var(--accent-orange);
+        }
+        
+        /* Responsive */
+        @media (max-width: 640px) {
+            .quick-access-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .quick-access-btn {
+                padding: 14px 20px;
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -537,6 +633,22 @@
 
             <div class="keyboard-tip">
                 <strong>Pro Tip:</strong> Press <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, or <kbd>P</kbd> to quickly switch between versions.
+            </div>
+            
+            <!-- Quick Access Links -->
+            <div class="quick-access">
+                <h4>Quick Access</h4>
+                <div class="quick-access-grid">
+                    <a href="https://edinfintie.com" class="quick-access-btn" target="_blank">
+                        <span>Edinfintie</span>
+                    </a>
+                    <a href="http://localhost:5173" class="quick-access-btn" target="_blank">
+                        <span>Local Dev</span>
+                    </a>
+                    <a href="https://pierup.com" class="quick-access-btn" target="_blank">
+                        <span>Pierup</span>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
