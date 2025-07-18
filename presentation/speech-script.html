@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Works Meeting Script – Speaker Notes</title>
+    <title>AI Lab @Mindgrub Meeting Script – Speaker Notes</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
@@ -11,17 +11,26 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'mg-green': '#00d26a',
-                        'mg-amber': '#ffb000',
-                        'mg-blue': '#009dff',
-                    },
+        // Configure Tailwind after it loads
+        function configureTailwind() {
+            if (typeof tailwind !== 'undefined') {
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            colors: {
+                                'mg-green': '#00d26a',
+                                'mg-amber': '#ffb000',
+                                'mg-blue': '#009dff',
+                            },
+                        }
+                    }
                 }
+            } else {
+                // If Tailwind isn't loaded yet, try again
+                setTimeout(configureTailwind, 50);
             }
         }
+        configureTailwind();
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -37,7 +46,7 @@
     <!-- Header -->
     <header class="py-8 px-6">
         <div class="container mx-auto">
-            <a href="index.html" class="inline-flex items-center space-x-3 text-gray-400 hover:text-mg-green transition-colors">
+            <a href="index3.html" class="inline-flex items-center space-x-3 text-gray-400 hover:text-mg-green transition-colors">
                 <span>←</span>
                 <span>Back to Presentation</span>
             </a>
@@ -49,186 +58,241 @@
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h1 class="text-5xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-4">
-                    AI Works @ Mindgrub – Meeting Script
+                    AI Lab @Mindgrub – Meeting Script
                 </h1>
-                <p class="text-gray-400 text-lg">One‑page cheat sheet – copy/paste into any .md viewer or Reveal speaker notes</p>
+                <p class="text-gray-400 text-lg">Executive presentation talking points aligned with index3.html</p>
             </div>
 
             <div class="space-y-8">
-                <!-- Slide 1 -->
+                <!-- Opening -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 1 – Cover</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Opening – Hero Section</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"Morning, Todd, thanks for carving out the time."</li>
+                        <li>"Good morning, Todd. Thank you for making time to discuss the future of Mindgrub."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Over the past six weeks we've gone from ideas to a working AI practice."</li>
+                        <li>"AI is transforming how digital agencies deliver value, and you've already recognized this."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Today I'll show the progress, the revenue path, and a fair way to keep me on board while I finish my current role milestone."</li>
+                        <li>"Today I'm presenting a unique partnership that gives you immediate access to a million-dollar AI toolkit while I personally absorb all transition risk."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"This isn't about hiring someone. It's about making a strategic investment that pays for itself."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 2 -->
+                <!-- The Opportunity -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 2 – Momentum 🟢</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">The Opportunity</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"First, where we stand."</li>
+                        <li>"You've already decided to build AI-powered WordPress capabilities. The only question is how."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Services and pricing framework—green, delivery underway."</li>
+                        <li>"Option one: Spend twelve to eighteen months and half a million to a million dollars building from scratch."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Website content—green, drafts due July thirtieth."</li>
+                        <li>"Option two: Deploy my production-ready toolkit immediately and start generating revenue in thirty days."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"mindgrub.ai launch—green, dev branch live, August eighth ship date."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Brand kit is amber—waiting on a logo decision, totally solvable."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"GTM enablement just added—blue for 'new', we'll align in today's call."</li>
+                        <li>"I'm offering immediate value, not future promises."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 3 -->
+                <!-- Momentum -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 3 – Revenue Map</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Already In Motion</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"Let's translate those tasks into numbers."</li>
+                        <li>"We're not planning. We're building. Look at our momentum."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Twenty Tier‑Three AI sites at twenty‑five to fifty K each: eight‑hundred K."</li>
+                        <li>"Services and pricing documentation—complete."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Ten AI audits at fifteen K: one‑hundred‑fifty K."</li>
+                        <li>"Website content and architecture—on track for July thirtieth."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Four retainers, five K a month for a quarter: another sixty."</li>
+                        <li>"mindgrub.ai launch—on track for August eighth."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Conservative total? Right at <strong class="text-mg-green">one‑million dollars</strong> this fiscal year."</li>
+                        <li>"The only amber item is brand identity—just needs a designer resource."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Green slice—sites; blue—audits; amber—retainers."</li>
+                        <li>"Execution has begun. The momentum is real."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 4 -->
+                <!-- Revenue -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 4 – AI Works Squad (4)</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Conservative Revenue Projection</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"We're already staffed lean and focused."</li>
+                        <li>"Let me show you conservative, realistic revenue targets."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Will—that's me—owning product strategy, audits, and the toolkit."</li>
+                        <li>"Twenty AI-powered sites averaging forty thousand each: eight hundred thousand."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Mo on ops and pricing."</li>
+                        <li>"Ten AI readiness audits at fifteen thousand: one hundred fifty thousand."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Sadie on branding and case studies."</li>
+                        <li>"Four optimization retainers for three months: sixty thousand."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Jacob on engineering—he's deploying the Tier‑Three stack right now."</li>
+                        <li>"Conservative year one target: <strong class="text-mg-green">one million dollars</strong>."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Contract bench is ready for surge work."</li>
+                        <li>"This is based on existing Mindgrub relationships. New business development is pure upside."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 5 -->
+                <!-- Investment Perspective -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 5 – WordPress Toolkit</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">The Investment Perspective</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"To accelerate delivery we're not starting from scratch."</li>
+                        <li>"Let me put this in investment terms."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Module one—MCP Server Toolkit: full REST control, static export."</li>
+                        <li>"Building these tools yourself: twelve to eighteen months, five hundred thousand to a million in costs, high risk of failure."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Two—AI Agent Site Generator: nine vertical templates for instant SMB sites."</li>
+                        <li>"Partnership with me: revenue in thirty to sixty days, proven toolkit worth over a million, minimal risk."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Three—GMMB extensions: bot wizard, seamless WP ↔ static sync."</li>
+                        <li>"You avoid development costs, save a year of time, and capture immediate revenue."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Four—Multi‑model manager so we can swap GPT‑4, Claude, or Qwen on‑prem."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Plus creator tools and content scripts for rapid iteration."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"All running today on <em>CyberUxcellence.com</em>."</li>
+                        <li>"Even at the highest compensation tier, this partnership pays for itself through avoided costs alone."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 6 -->
+                <!-- Team -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 6 – Dual Schedule</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Your AI Lab Leadership Team</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"Here's how I cover both roles without conflict."</li>
+                        <li>"This isn't just me. We have a complete team ready to execute."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Monday, Thursday, Friday—remote at current position until three‑thirty, then Mindgrub three‑forty‑five to seven and an evening block."</li>
+                        <li>"I lead AI/ML and product strategy with fifteen-plus years experience."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Tuesday and Wednesday—I'm on site at current position; six to nine PM is Mindgrub code and strategy."</li>
+                        <li>"Mo brings enterprise sales and solutions leadership."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Separate devices, hours logged, ethics officer pre‑cleared."</li>
+                        <li>"Sadie drives AI-first brand and marketing strategy."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Jacob ensures quality and strategic excellence."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Plus a pre-vetted contractor network for surge capacity."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
                 </div>
 
-                <!-- Slide 7 -->
+                <!-- Partnership Model -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 7 – Compensation Bridge</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Partnership Built on Shared Success</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"Leaving current position before thirty years costs me about seven‑hundred‑twenty‑five K in pension and retiree health value."</li>
+                        <li>"Traditional hires require both parties to take a leap of faith. I'm proposing something different."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"To self‑fund that gap I need roughly a one‑hundred‑twenty K bump over my current salary."</li>
+                        <li>"By maintaining my current position while building AI Lab, I personally absorb the transition risk."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"So the fair package is: base of two‑hundred‑fifty K."</li>
+                        <li>"You get immediate access to senior AI expertise and a production-ready toolkit without a full-time commitment."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Twenty‑percent bonus tied to the one‑million revenue target."</li>
+                        <li>"I invest twenty-plus hours weekly because I believe in what we can build together."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Sign‑on or RSUs worth one‑twenty‑five K, two‑year vest."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Full family health and a five‑percent 401‑k match."</li>
-                        <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"That sits mid‑band for AI leadership and is directly linked to the upside you've just seen."</li>
+                        <li>"Success is earned through real revenue, not promised in interviews."</li>
                         <li><strong class="text-mg-amber">pause / advance</strong></li>
                     </ul>
-
-                    <ul class="space-y-2 text-gray-300 mt-4">
-                        <li class="flex items-start space-x-3">
-                        <span class="text-mg-blue">•</span>
-                        <span>Ongoing license fees/royalties for every client or internal deployment of proprietary modules ($1,000/deployment or 10% of project fee if core tool/agent)</span>
-                    </li>
-                    
-                    <li class="flex items-start space-x-3">
-                    <span class="text-mg-blue">•</span>
-                    <span>Solo prompt-to-product delivery of Tier 3 projects triggers a 15% bonus or $2K+ payout (for $20K+ engagements)</span>
-                    </li>
-                      
-                <li class="flex items-start space-x-3"><span class="text-mg-blue">•</span>
-                    <span>Perpetual royalties or phantom equity if tools/modules are reused in 3+ projects</span>
-                    </li>
-  
-                    <li class="flex items-start space-x-3"><span class="text-mg-blue">•</span>
-                    <span>Builder retains IP for independently built modules unless bought out or converted to equity/phantom equity</span>
-                    </li>
-                </ul>
-
                 </div>
 
-                <!-- Slide 8 -->
+                <!-- Contract Compensation -->
                 <div class="glass rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-mg-green mb-4">Slide 8 – Next Steps</h2>
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Phase 1: Performance-Based Contract</h2>
                     <ul class="space-y-3 text-gray-300">
-                        <li>"So, next steps."</li>
+                        <li>"Let me show you how the contract compensation works."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"One—approve the comp package and a twenty‑hour contract today."</li>
+                        <li>"Base of ten thousand monthly ensures my dedicated twenty hours."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Two—I drop the toolkit into the Mindgrub repo Monday, July eighth."</li>
+                        <li>"Performance incentives add up to seventy-six hundred monthly through:"</li>
+                        <li class="ml-6">• Fifteen percent of prompt-to-product revenue</li>
+                        <li class="ml-6">• Two thousand dollar bonuses for major project wins</li>
+                        <li class="ml-6">• Toolkit licensing fees</li>
+                        <li class="ml-6">• Revenue share when my tools are core to delivery</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Three—mindgrub.ai public launch August eighth."</li>
+                        <li>"Target compensation: seventeen thousand six hundred monthly, or about two hundred dollars per hour for senior AI expertise."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Four—first paid audit closed September first."</li>
+                        <li>"I earn more when I deliver more value. Our interests are perfectly aligned."</li>
+                        <li><strong class="text-mg-amber">pause / advance</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Full-Time Options -->
+                <div class="glass rounded-2xl p-8">
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Phase 2: Full-Time Partnership Structures</h2>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>"After proving value in the contract phase, we have three paths to full-time leadership."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li>"Five—twenty Tier‑Three wins by December thirty‑first."</li>
+                        <li>"Option A: Security focus. One-ninety base plus bonus, covers my retirement gap, modest equity upside."</li>
                         <li><strong class="text-mg-amber">pause</strong></li>
-                        <li><strong class="text-mg-green">"Ready to green‑light?"</strong></li>
+                        <li>"Option B: Balanced partnership. One-seventy-five base, thirty-one K in RSUs, five to ten percent AI Lab equity."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Option C: Transformation bet. One-seventy-five base, profit share, ten to fifteen percent founding equity."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Each reflects a different belief about AI Lab's potential. The right choice depends on how boldly we want to dream."</li>
+                        <li><strong class="text-mg-amber">pause / advance</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Toolkit -->
+                <div class="glass rounded-2xl p-8">
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">The Complete AI Toolkit</h2>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>"Let me show you what's ready to deploy today."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"WordPress MCP Server: Complete REST API control, Gutenberg management, static export."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"AI Agent: Nine business templates for instant site generation with AI content."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"GMMB Extensions: Advanced integrations, AI wizard interface."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Multi-model AI provider: GPT, Claude, and local model support with failover."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Six complete solutions. Over a million in development value. Ready today."</li>
+                        <li><strong class="text-mg-amber">pause / advance</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Decision Points -->
+                <div class="glass rounded-2xl p-8">
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Your Decision Points</h2>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>"Here's what we need to capture this opportunity."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"One: Approve the contract structure today. Revenue starts in thirty days."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Two: Transfer the toolkit to Mindgrub repos in week one."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Three: Launch mindgrub.ai on August eighth."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Four: Close our first client win by September first."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"Five: Scale to twenty-plus projects by Q4, then discuss full-time transition."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li>"The toolkit is ready. The team is ready. The market is ready."</li>
+                        <li><strong class="text-mg-amber">pause</strong></li>
+                        <li><strong class="text-mg-green text-2xl">"Are you ready to transform Mindgrub?"</strong></li>
                         <li><strong class="text-red-400">pause, stay silent for Todd's response</strong></li>
                     </ul>
-                    <p class="mt-6 text-mg-green text-lg">Fair base, performance incentives, and ongoing royalties/equity for proprietary solutions—this structure supports both contract and full-time success at Mindgrub.</p>
+                </div>
 
+                <!-- Quick Reference -->
+                <div class="glass rounded-2xl p-8 bg-mg-green/5">
+                    <h2 class="text-2xl font-bold text-mg-green mb-4">Quick Reference Numbers</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-mg-blue mb-3">Contract Phase (Now)</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Base: $10,000/month</li>
+                                <li>• Target with performance: $17,600/month</li>
+                                <li>• Hourly rate: ~$203/hour</li>
+                                <li>• Time commitment: 20 hours/week</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-mg-blue mb-3">Key Value Points</h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li>• Toolkit value: $1M+ avoided costs</li>
+                                <li>• Time saved: 12-18 months</li>
+                                <li>• Revenue target: $1M year 1</li>
+                                <li>• Risk: Minimal (I absorb it)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Back Button -->
                 <div class="text-center pt-8">
-                    <a href="index.html" class="inline-flex items-center space-x-3 glass rounded-2xl px-8 py-4 hover:scale-105 transition-transform">
+                    <a href="index3.html" class="inline-flex items-center space-x-3 glass rounded-2xl px-8 py-4 hover:scale-105 transition-transform">
                         <span>←</span>
                         <span class="font-semibold">Back to Presentation</span>
                     </a>
