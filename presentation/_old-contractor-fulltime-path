@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contractor to Full-Time Path – MindgrubAI</title>
+  <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'mg-green': '#00d26a',
+            'mg-amber': '#ffb000',
+            'mg-blue': '#009dff',
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans">
+  <header class="py-8 px-6">
+    <div class="container mx-auto">
+      <a href="index.html" class="inline-flex items-center space-x-3 text-gray-400 hover:text-mg-green transition-colors">
+        <span>←</span>
+        <span>Back to Presentation</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-6 pb-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-4">
+          Contractor to Full-Time Path
+        </h1>
+        <p class="text-gray-400 text-lg">Aligning fair contract, royalties, and full-time growth</p>
+      </div>
+
+      <!-- Key Points Section -->
+      <div class="mb-12 glass rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-mg-green mb-6 text-center">Compensation Model</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-bold text-mg-blue mb-2">1. Project Execution (Tier 3 Builds)</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• $10K/mo base (2+ projects/mo, $155/hr billed to client)</li>
+              <li>• <span class="text-mg-green font-bold">+15% fee</span> for solo prompt-to-product delivery</li>
+              <li>• <span class="text-mg-amber font-bold">$2K bonus</span> for solo projects &gt;$20K</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-mg-blue mb-2">2. Tool Licensing (Ongoing Use)</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>• <span class="text-mg-blue font-bold">$1,000/site license</span> for tool reuse in Tier 3 client builds</li>
+              <li>• <span class="text-mg-green font-bold">10% of project revenue</span> if your agent/tool is core</li>
+              <li>• Repo/module tracking for attribution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milestone Pathway -->
+      <div class="mb-12 glass rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-mg-blue mb-6 text-center">Pathway to Full-Time</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>• $2K bonus after 6 Tier 3 builds</li>
+          <li>• $250K+ value created → eligible for $200K/yr+ full-time</li>
+          <li>• 3+ tools reused in 5+ projects = perpetual royalty/equity</li>
+          <li>• Internal adoption = architect/product lead role</li>
+        </ul>
+      </div>
+
+      <!-- Bonus Clauses -->
+      <div class="mb-12 glass rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-mg-amber mb-6 text-center">Bonus Clauses</h2>
+        <ul class="space-y-2 text-gray-300">
+          <li>• IP stays with builder unless bought out</li>
+          <li>• Option for equity/phantom equity as tools scale</li>
+          <li>• Royalty/license tracker (repo tag/log)</li>
+        </ul>
+      </div>
+
+      <div class="mt-8 text-center">
+        <blockquote class="glass rounded-2xl p-8">
+          <span class="text-2xl italic text-gray-300">
+            "Delivering repeatable Tier 3 AI solutions as a partner, scaling toward full-time leadership and ongoing royalties for innovation."
+          </span>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
