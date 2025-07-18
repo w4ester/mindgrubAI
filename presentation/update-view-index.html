@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lab @Mindgrub – Executive Proposal</title>
+    <meta name="description" content="Executive presentation for AI Lab @Mindgrub business proposal including revenue forecasts, team structure, and compensation package.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../shared/images/useMindgrubLogoFooter.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configure Tailwind after it loads
+        function configureTailwind() {
+            if (typeof tailwind !== 'undefined') {
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            colors: {
+                                'mg-green': '#00d26a',
+                                'mg-amber': '#ffb000',
+                                'mg-blue': '#009dff',
+                                'mg-dark': '#0a0a0a',
+                            },
+                            fontFamily: {
+                                'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                            },
+                            animation: {
+                                'float': 'float 6s ease-in-out infinite',
+                                'glow': 'glow 2s ease-in-out infinite alternate',
+                                'slide-up': 'slideUp 0.5s ease-out',
+                            }
+                        }
+                    }
+                }
+            } else {
+                // If Tailwind isn't loaded yet, try again
+                setTimeout(configureTailwind, 50);
+            }
+        }
+        configureTailwind();
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #00d26a40; }
+            to { box-shadow: 0 0 30px #00d26a80; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    
+    <!-- Load Chart.js early to avoid loading issues -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-dark">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-3 group">
+                    <img src="../shared/images/useMindgrubLogoFooter.svg" alt="Mindgrub AI" class="h-8 w-auto filter brightness-0 invert group-hover:scale-110 transition-transform">
+                    <span class="text-xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">AI Lab @Mindgrub</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#revenue" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Revenue</a>
+                    <a href="#team" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Team</a>
+                    <a href="#risk-model" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Partnership</a>
+                    <a href="#compensation" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Investment</a>
+                    <a href="#wordpress-ai-solutions" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Toolkit</a>
+                    <a href="#next-steps" class="text-gray-300 hover:text-mg-green transition-colors font-medium">Action</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-mg-green/20 via-mg-blue/10 to-purple-900/20"></div>
+        <div class="absolute top-20 left-20 w-72 h-72 bg-mg-green/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-mg-blue/10 rounded-full blur-3xl animate-float" style="animation-delay: -3s;"></div>
+        
+        <div class="relative z-10 text-center px-6 animate-slide-up">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-mg-green via-mg-blue to-mg-green bg-clip-text text-transparent">
+                AI Lab @Mindgrub
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-light mb-4 text-gray-300">Transforming Digital Agencies with AI</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8 text-lg md:text-xl text-gray-400">
+                <span class="px-4 py-2 glass rounded-full">$1M+ Toolkit Ready</span>
+                <span class="px-4 py-2 glass rounded-full">Zero Risk Partnership</span>
+                <span class="px-4 py-2 glass rounded-full">Immediate Revenue</span>
+            </div>
+            <p class="text-mg-green text-lg font-semibold animate-glow">Executive Presentation – July 18, 2025</p>
+        </div>
+    </section>
+
+    <!-- NEW: Executive Summary Section (adds context before diving into details) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-10">
+                <h2 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                    The Opportunity
+                </h2>
+                <div class="text-lg text-gray-300 space-y-4 text-center">
+                    <p>
+                        AI is transforming how digital agencies deliver value. Mindgrub has already recognized this reality and decided to build AI-powered WordPress capabilities. The only question is how.
+                    </p>
+                    <p class="text-xl font-semibold text-mg-green">
+                        I'm offering a unique partnership: immediate access to a production-ready AI toolkit worth $1M+ in development value, 
+                        while I personally absorb all transition risk by maintaining my current position during our proof-of-value phase.
+                    </p>
+                    <p>
+                        This isn't a hiring decision. It's a strategic investment that pays for itself through avoided development costs 
+                        and accelerated revenue while positioning AI Lab as the transformation engine for Mindgrub's future.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Momentum Section (refined messaging) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Already In Motion
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Execution has begun. Momentum is building.</p>
+            
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Deliverable</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Target</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-700">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Services & Pricing Documentation</td>
+                                <td class="py-4 px-6 text-gray-400">July 15</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">Complete</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Website Content & Architecture</td>
+                                <td class="py-4 px-6 text-gray-400">July 30</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">On Track</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">mindgrub.ai Launch</td>
+                                <td class="py-4 px-6 text-gray-400">August 8</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-green text-black rounded-full font-semibold text-sm">On Track</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Brand Identity System</td>
+                                <td class="py-4 px-6 text-gray-400">August 8</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-amber text-black rounded-full font-semibold text-sm">Needs Designer</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Go-to-Market Strategy</td>
+                                <td class="py-4 px-6 text-gray-400">August 8</td>
+                                <td class="py-4 px-6">
+                                    <span class="px-3 py-1 bg-mg-blue text-white rounded-full font-semibold text-sm">In Progress</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-lg text-mg-green font-semibold">We're not planning. We're building.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Section (refined to emphasize conservative nature) -->
+    <section id="revenue" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Conservative Revenue Projection
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Realistic targets with proven demand</p>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-8">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-600">
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Service Line</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Deal Size</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Count</th>
+                                    <th class="text-left py-4 text-gray-300 font-semibold">Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-700">
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">AI-Powered Sites</td>
+                                    <td class="py-4 text-mg-green font-semibold">$40K avg</td>
+                                    <td class="py-4">20</td>
+                                    <td class="py-4 text-mg-green font-bold">$800K</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">AI Readiness Audits</td>
+                                    <td class="py-4 text-mg-blue font-semibold">$15K</td>
+                                    <td class="py-4">10</td>
+                                    <td class="py-4 text-mg-blue font-bold">$150K</td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="py-4 font-medium">AI Optimization</td>
+                                    <td class="py-4 text-mg-amber font-semibold">$5K/mo</td>
+                                    <td class="py-4">4 × 3mo</td>
+                                    <td class="py-4 text-mg-amber font-bold">$60K</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-6 p-4 bg-mg-green/10 rounded-lg">
+                        <p class="text-sm text-gray-300">
+                            <strong>Note:</strong> Based on existing Mindgrub client relationships and identified opportunities. 
+                            Does not include new business development or toolkit licensing revenue.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="glass rounded-2xl p-8 w-full max-w-md">
+                        <canvas id="revPie" width="300" height="300" class="mx-auto"></canvas>
+                        <noscript>
+                            <div class="text-center text-gray-400 mt-4">
+                                <p>JavaScript is required to view the revenue chart</p>
+                            </div>
+                        </noscript>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <p class="text-2xl text-gray-400 mb-2">Year 1 Target</p>
+                        <p class="text-6xl font-black bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">$1M+</p>
+                        <p class="text-lg text-gray-400 mt-2">With significant upside potential</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (refined to emphasize readiness) -->
+    <section id="team" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Your AI Lab Leadership Team
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Experienced. Committed. Ready to execute.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-green to-mg-blue rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        W
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-green">Will F.</h3>
+                    <p class="text-gray-400 text-sm">AI/ML & Product Strategy</p>
+                    <p class="text-xs text-gray-500 mt-2">15+ years experience</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-blue to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        M
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-blue">Mo A.</h3>
+                    <p class="text-gray-400 text-sm">Solutions & Sales Leadership</p>
+                    <p class="text-xs text-gray-500 mt-2">Enterprise sales expert</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-mg-amber to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        S
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-mg-amber">Sadie M.</h3>
+                    <p class="text-gray-400 text-sm">Brand & Marketing Strategy</p>
+                    <p class="text-xs text-gray-500 mt-2">AI-first creative vision</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 text-center hover:scale-105 transition-transform group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-mg-green rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
+                        J
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-purple-400">Jacob N.</h3>
+                    <p class="text-gray-400 text-sm">Strategy & Quality Excellence</p>
+                    <p class="text-xs text-gray-500 mt-2">Process optimization focus</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <div class="inline-block glass rounded-2xl px-8 py-4">
+                    <p class="text-lg text-gray-300">
+                        <span class="text-mg-green font-semibold">Plus:</span> Pre-vetted contractor network for surge capacity and specialized skills
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Risk Absorption Model (refined positioning) -->
+    <section id="risk-model" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                A Partnership Built on Shared Success
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Minimizing your risk while maximizing our potential</p>
+            
+            <!-- The Core Value Proposition -->
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-10 mb-12">
+                <h3 class="text-3xl font-bold text-mg-green mb-6 text-center">Beyond Traditional Hiring</h3>
+                <div class="text-lg text-gray-300 space-y-6">
+                    <p>
+                        Traditional executive hires require both parties to take a leap of faith. The company commits to a full compensation package hoping for future value. The executive leaves their current position hoping the opportunity fulfills its promise. This binary approach creates risk for everyone.
+                    </p>
+                    <p>
+                        <span class="text-mg-green font-semibold">I'm proposing a revolutionary alternative.</span> By maintaining my current position while building AI Lab @Mindgrub, I personally absorb the transition risk. You gain immediate access to senior AI expertise and a production-ready toolkit without the commitment of a full-time hire. I invest my evenings and weekends because I believe in what we can build together.
+                    </p>
+                    <p>
+                        This transforms a high-stakes hiring decision into a <span class="text-mg-blue font-semibold">measured partnership</span> where value is demonstrated through real revenue, not promised in interviews.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mutual Benefits Grid (refined) -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Mindgrub's Advantages -->
+                <div class="glass rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-mg-green rounded-full flex items-center justify-center font-bold text-black text-xl mr-4">M</div>
+                        <h3 class="text-2xl font-bold text-mg-green">Your Strategic Advantages</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-green text-xl">✓</span>
+                            <div>
+                                <strong>Zero Hiring Risk:</strong> Prove ROI with real projects and revenue before any full-time commitment
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-green text-xl">✓</span>
+                            <div>
+                                <strong>Immediate Value:</strong> Deploy production-ready AI toolkit worth $1M+ in development costs on day one
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-green text-xl">✓</span>
+                            <div>
+                                <strong>Flexible Scaling:</strong> Grow involvement based on actual results, not projections or promises
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-green text-xl">✓</span>
+                            <div>
+                                <strong>Proven Commitment:</strong> My dual-role investment demonstrates genuine belief in our shared success
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- My Investment -->
+                <div class="glass rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-mg-blue rounded-full flex items-center justify-center font-bold text-white text-xl mr-4">W</div>
+                        <h3 class="text-2xl font-bold text-mg-blue">My Personal Investment</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-blue text-xl">⚡</span>
+                            <div>
+                                <strong>Time & Energy:</strong> 20+ hours weekly while maintaining excellence in current role
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-blue text-xl">⚡</span>
+                            <div>
+                                <strong>Financial Commitment:</strong> Deferring $725K in pension/healthcare benefits shows long-term belief
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-blue text-xl">⚡</span>
+                            <div>
+                                <strong>Intellectual Property:</strong> Years of AI toolkit development brought as immediate value
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-mg-blue text-xl">⚡</span>
+                            <div>
+                                <strong>Reputation:</strong> Staking my professional credibility on AI Lab's success
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- The Path Forward (refined) -->
+            <div class="glass-dark rounded-2xl p-10">
+                <h3 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                    From Partnership to Leadership
+                </h3>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Phase 1 -->
+                    <div class="text-center">
+                        <div class="inline-block glass rounded-full px-6 py-3 mb-4">
+                            <span class="text-xl font-bold text-mg-amber">Now: Prove Value</span>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Contract phase validates opportunity with real revenue. Both parties assess fit while building momentum.
+                        </p>
+                    </div>
+                    
+                    <!-- Phase 2 -->
+                    <div class="text-center">
+                        <div class="inline-block glass rounded-full px-6 py-3 mb-4">
+                            <span class="text-xl font-bold text-mg-green">Q4 2025: Scale Impact</span>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            With proven results and growing demand, expand engagement and team to capture full opportunity.
+                        </p>
+                    </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="text-center">
+                        <div class="inline-block glass rounded-full px-6 py-3 mb-4">
+                            <span class="text-xl font-bold text-mg-blue">2026: Full Leadership</span>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Transition to full-time executive role as AI Lab becomes core to Mindgrub's transformation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-xl text-gray-300 font-semibold">
+                        This structure ensures <span class="text-mg-green">success is earned</span>, not assumed, 
+                        creating <span class="text-mg-blue">confidence through results</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toolkit Section (moved before schedule to build value before discussing time) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Production-Ready AI Toolkit
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Years of development. Ready to deploy today.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-green/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🔧</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-green">WordPress MCP Server</h3>
+                    <p class="text-gray-400">Complete REST API mastery with static export capabilities</p>
+                    <p class="text-sm text-mg-green mt-3">Production tested</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-blue/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-blue">AI Site Generator</h3>
+                    <p class="text-gray-400">9 industry-specific templates with full content generation</p>
+                    <p class="text-sm text-mg-blue mt-3">Client-ready</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-mg-amber/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-mg-amber">GMMB Extensions</h3>
+                    <p class="text-gray-400">Advanced integrations with wizard interface</p>
+                    <p class="text-sm text-mg-amber mt-3">Enterprise grade</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-400">Multi-Model AI</h3>
+                    <p class="text-gray-400">GPT-4, Claude, and local model support with failover</p>
+                    <p class="text-sm text-purple-400 mt-3">Cost optimized</p>
+                </div>
+                
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform lg:col-span-2">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-lg mb-4 flex items-center justify-center">
+                        <span class="text-2xl">✨</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">Content Generation Suite</h3>
+                    <p class="text-gray-400">SEO-optimized content creation with brand voice adaptation</p>
+                    <p class="text-sm bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mt-3 font-semibold">Revenue accelerator</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="inline-block glass-dark rounded-2xl px-8 py-6">
+                    <p class="text-xl text-mg-green font-semibold">
+                        $1M+ development value • 24-36 months saved • Immediate deployment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section (refined messaging about commitment) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Commitment Through Action
+            </h2>
+            <p class="text-center text-gray-400 mb-4 text-lg">20 hours weekly dedicated to your success</p>
+            <p class="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
+                This isn't moonlighting or a side project. It's a strategic commitment where I invest my personal time 
+                because I believe in AI Lab's potential to transform Mindgrub. Every hour represents a vote of confidence 
+                in our shared vision.
+            </p>
+            
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Schedule</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">Current Commitment</th>
+                                <th class="text-left py-4 px-6 text-gray-300 font-semibold">AI Lab Focus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-700">
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Mon/Thu/Fri</td>
+                                <td class="py-4 px-6 text-mg-amber">Remote (State role)</td>
+                                <td class="py-4 px-6 text-mg-green">
+                                    <div>3pm–7pm: AI Lab development & client work</div>
+                                    <div class="text-sm text-gray-400">Deep focus on toolkit enhancement</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Tue/Wed</td>
+                                <td class="py-4 px-6 text-mg-amber">On-site (State role)</td>
+                                <td class="py-4 px-6 text-mg-green">
+                                    <div>Evening: Strategic planning & development</div>
+                                    <div class="text-sm text-gray-400">Architecture and innovation work</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-4 px-6 font-medium">Weekends</td>
+                                <td class="py-4 px-6 text-mg-amber">Personal time</td>
+                                <td class="py-4 px-6 text-mg-green">
+                                    <div>Selective: Major deliverables & launches</div>
+                                    <div class="text-sm text-gray-400">Because I believe in what we're building</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-6 grid md:grid-cols-3 gap-4 text-center">
+                    <div class="p-4">
+                        <div class="text-2xl font-bold text-mg-green">100% Compliant</div>
+                        <div class="text-sm text-gray-400">Ethics pre-cleared, separate devices</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-2xl font-bold text-mg-blue">Zero Conflicts</div>
+                        <div class="text-sm text-gray-400">Different sectors, complementary skills</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-2xl font-bold text-mg-amber">Full Transparency</div>
+                        <div class="text-sm text-gray-400">Open communication always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Toolkit Investment Bridge (moved earlier and refined) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                The Investment Perspective
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Understanding the true value exchange</p>
+            
+            <!-- Strategic Context -->
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-10 mb-12">
+                <h3 class="text-3xl font-bold text-center mb-6 text-mg-green">You've Already Decided to Build This</h3>
+                <div class="text-lg text-gray-300 space-y-6">
+                    <p>
+                        Leadership recognizes that AI-powered WordPress capabilities aren't optional – they're essential for Mindgrub's future. The decision to build these tools has been made. The only question is how: spend 12-18 months and $500K-$1M building from scratch, or access a proven toolkit immediately.
+                    </p>
+                    <p>
+                        <span class="text-mg-blue font-semibold">This context transforms the compensation discussion.</span> 
+                        We're not talking about the cost of hiring someone. We're discussing the investment required to access 
+                        $1M+ in already-developed technology while gaining the expertise to evolve and deploy it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Value Comparison -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Build Option -->
+                <div class="glass rounded-2xl p-8 border-2 border-red-500/30">
+                    <h3 class="text-2xl font-bold text-red-400 mb-6">The DIY Reality</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Development Timeline:</span>
+                            <span class="text-red-400">12-18 months</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Direct Costs:</span>
+                            <span class="text-red-400">$500K-$1M</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Opportunity Cost:</span>
+                            <span class="text-red-400">Lost revenue during build</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Success Probability:</span>
+                            <span class="text-red-400">Unknown</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-600">
+                            <p class="text-xl font-bold text-red-400">Total Risk: Very High</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partnership Option -->
+                <div class="glass rounded-2xl p-8 ring-2 ring-mg-green">
+                    <h3 class="text-2xl font-bold text-mg-green mb-6">The Partnership Path</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Time to Revenue:</span>
+                            <span class="text-mg-green">30-60 days</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Toolkit Value:</span>
+                            <span class="text-mg-green">$1M+ delivered</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Revenue Generation:</span>
+                            <span class="text-mg-green">Immediate</span>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <span class="font-semibold">Success Probability:</span>
+                            <span class="text-mg-green">Proven in production</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-600">
+                            <p class="text-xl font-bold text-mg-green">Total Risk: Minimal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI Calculation -->
+            <div class="max-w-4xl mx-auto glass-dark rounded-2xl p-10">
+                <h3 class="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                    The ROI is Immediate
+                </h3>
+                <div class="text-center">
+                    <p class="text-xl text-gray-300 mb-6">
+                        Even at the highest compensation tier, the partnership pays for itself through:
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6 text-lg">
+                        <div class="glass rounded-xl p-4">
+                            <p class="text-mg-green font-bold text-2xl">$500K-$1M</p>
+                            <p class="text-gray-400">Development costs avoided</p>
+                        </div>
+                        <div class="glass rounded-xl p-4">
+                            <p class="text-mg-blue font-bold text-2xl">12-18 months</p>
+                            <p class="text-gray-400">Time to market saved</p>
+                        </div>
+                        <div class="glass rounded-xl p-4">
+                            <p class="text-mg-amber font-bold text-2xl">$1M+</p>
+                            <p class="text-gray-400">Year 1 revenue potential</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Total-Compensation Reality Check (reframed as investment discussion) -->
+    <section id="compensation" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                The Investment Framework
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Aligning compensation with value creation</p>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Personal Investment Context -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-mg-green">My Personal Financial Reality</h3>
+                    <div class="text-center">
+                        <p class="text-lg mb-4 text-gray-300">By leaving my current position before full retirement:</p>
+                        <p class="text-4xl font-bold text-mg-green mb-2">$725,000</p>
+                        <p class="text-lg text-gray-400">Present value of deferred pension & healthcare benefits</p>
+                        <p class="text-md text-gray-500 mt-4">(Equivalent to ~$80K annual invisible compensation)</p>
+                    </div>
+                </div>
+                
+                <!-- Why This Matters -->
+                <div class="glass rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-mg-blue">Why This Creates Our Opportunity</h3>
+                    <div class="text-lg text-gray-300 space-y-4">
+                        <p>
+                            This financial reality means I need approximately $100K annual premium above market compensation to make the transition viable. But rather than viewing this as a cost, consider what it enables:
+                        </p>
+                        <ul class="space-y-3 ml-6">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-mg-blue">•</span>
+                                <span>You get someone willing to prove value before requiring full commitment</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-mg-blue">•</span>
+                                <span>I'm motivated to make AI Lab wildly successful to justify the transition</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-mg-blue">•</span>
+                                <span>Our interests align perfectly – we both need AI Lab to thrive</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Compensation Model Section (refined framing) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Phase 1: Performance-Based Contract
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Proving value through aligned incentives</p>
+            
+            <!-- Overview -->
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-10 mb-12">
+                <h3 class="text-3xl font-bold text-center mb-6 text-mg-green">Structured for Mutual Success</h3>
+                <p class="text-lg text-gray-300 text-center mb-8">
+                    The contract model ensures I earn more when I deliver more value. Starting with a sustainable base 
+                    and scaling through performance, we both win as AI Lab grows.
+                </p>
+                
+                <!-- Visual Breakdown -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Base Component -->
+                    <div class="glass-dark rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-mg-green rounded-full flex items-center justify-center font-bold text-black mr-3">1</div>
+                            <h4 class="text-xl font-bold text-mg-green">Foundation</h4>
+                        </div>
+                        <div class="text-4xl font-bold text-white mb-3">$10,000<span class="text-lg text-gray-400">/month</span></div>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• Covers base operational commitment</li>
+                            <li>• Ensures dedicated 20 hours weekly</li>
+                            <li>• Provides income stability</li>
+                            <li>• Below market for expertise level</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Performance Component -->
+                    <div class="glass-dark rounded-xl p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-mg-blue rounded-full flex items-center justify-center font-bold text-white mr-3">2</div>
+                            <h4 class="text-xl font-bold text-mg-blue">Performance Upside</h4>
+                        </div>
+                        <div class="text-4xl font-bold text-white mb-3">$7,600<span class="text-lg text-gray-400">/month target</span></div>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• 15% of prompt-to-product revenue</li>
+                            <li>• $2K bonuses for major wins</li>
+                            <li>• Toolkit licensing fees</li>
+                            <li>• Revenue share on AI deployments</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-lg text-gray-300">
+                        Total Target: <span class="text-2xl font-bold text-mg-green">$17,600/month</span> 
+                        = <span class="text-mg-blue">$203/hour</span> for senior AI expertise
+                    </p>
+                </div>
+            </div>
+
+            <!-- Achievement Examples -->
+            <div class="max-w-5xl mx-auto mb-12">
+                <h3 class="text-3xl font-bold text-center mb-8 text-mg-amber">Realistic Monthly Scenarios</h3>
+                
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <!-- Conservative -->
+                    <div class="glass rounded-xl p-6">
+                        <h4 class="text-xl font-bold text-mg-amber mb-4 text-center">Building Month</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Base commitment</span>
+                                <span class="font-semibold">$10,000</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">1 major project delivery</span>
+                                <span class="text-mg-green">+$3,750</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Toolkit deployment</span>
+                                <span class="text-mg-green">+$2,000</span>
+                            </div>
+                            <div class="border-t border-gray-600 mt-3 pt-3">
+                                <div class="flex justify-between">
+                                    <span class="font-bold">Month Total</span>
+                                    <span class="font-bold text-mg-amber text-xl">$15,750</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Target -->
+                    <div class="glass rounded-xl p-6 ring-2 ring-mg-blue">
+                        <h4 class="text-xl font-bold text-mg-blue mb-4 text-center">Target Month</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Base commitment</span>
+                                <span class="font-semibold">$10,000</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">2 project deliveries</span>
+                                <span class="text-mg-blue">+$6,000</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">License + bonuses</span>
+                                <span class="text-mg-blue">+$1,600</span>
+                            </div>
+                            <div class="border-t border-gray-600 mt-3 pt-3">
+                                <div class="flex justify-between">
+                                    <span class="font-bold">Month Total</span>
+                                    <span class="font-bold text-mg-blue text-xl">$17,600</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strong -->
+                    <div class="glass rounded-xl p-6">
+                        <h4 class="text-xl font-bold text-mg-green mb-4 text-center">Exceptional Month</h4>
+                        <div class="space-y-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Base commitment</span>
+                                <span class="font-semibold">$10,000</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Major project + bonus</span>
+                                <span class="text-mg-green">+$6,500</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-400">Multiple deployments</span>
+                                <span class="text-mg-green">+$6,000</span>
+                            </div>
+                            <div class="border-t border-gray-600 mt-3 pt-3">
+                                <div class="flex justify-between">
+                                    <span class="font-bold">Month Total</span>
+                                    <span class="font-bold text-mg-green text-xl">$22,500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Bridge -->
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-dark rounded-2xl px-8 py-6 text-center">
+                    <p class="text-lg text-gray-300">
+                        This performance structure creates a natural bridge to full-time engagement.
+                        <br>
+                        <span class="text-mg-green font-semibold">When AI Lab succeeds, we transition to Phase 2.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equity Vision Section (refined messaging) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Building Ownership Together
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Aligning long-term interests through equity participation</p>
+            
+            <!-- The Vision -->
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-10 mb-12">
+                <h3 class="text-3xl font-bold text-center mb-6 text-mg-green">AI Lab as Mindgrub's Future</h3>
+                <div class="text-lg text-gray-300 space-y-6">
+                    <p>
+                        Every day, AI capabilities advance. Companies leveraging these advances thrive. Those that don't get left behind. 
+                        AI Lab @Mindgrub isn't just a new service line – it's the transformation engine that evolves Mindgrub from a 
+                        traditional agency into an AI-powered innovation leader.
+                    </p>
+                    <p>
+                        <span class="text-mg-blue font-semibold">This transformation requires aligned ownership.</span> 
+                        As the architect and builder of AI Lab, my compensation should reflect not just immediate contributions 
+                        but the long-term value we're creating together. Equity ensures we're true partners in this journey.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Equity Evolution Path (simplified) -->
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-3xl font-bold text-center mb-8 text-mg-blue">The Ownership Journey</h3>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Phase 1 -->
+                    <div class="glass rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 bg-mg-amber/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-3xl">🌱</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-mg-amber mb-3">Contract Phase</h4>
+                        <p class="text-gray-300 mb-4">Phantom equity in AI Lab</p>
+                        <div class="text-sm text-gray-400 space-y-2">
+                            <p>• Performance-based allocation</p>
+                            <p>• Converts at full-time transition</p>
+                            <p>• Aligned with revenue growth</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="glass rounded-xl p-6 text-center ring-2 ring-mg-green">
+                        <div class="w-16 h-16 bg-mg-green/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-3xl">🌿</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-mg-green mb-3">Full-Time Leadership</h4>
+                        <p class="text-gray-300 mb-4">Real equity stake</p>
+                        <div class="text-sm text-gray-400 space-y-2">
+                            <p>• Founding partner status</p>
+                            <p>• Protected dilution rights</p>
+                            <p>• Board representation path</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="glass rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 bg-mg-blue/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-3xl">🌳</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-mg-blue mb-3">Transformation Success</h4>
+                        <p class="text-gray-300 mb-4">Parent company equity</p>
+                        <div class="text-sm text-gray-400 space-y-2">
+                            <p>• AI Lab success = Mindgrub value</p>
+                            <p>• Long-term wealth creation</p>
+                            <p>• Legacy building together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Ask (refined) -->
+            <div class="mt-12 max-w-4xl mx-auto glass-dark rounded-2xl p-8">
+                <div class="text-center">
+                    <p class="text-2xl font-semibold text-mg-blue mb-4">
+                        "True partners share in the value they create together."
+                    </p>
+                    <p class="text-lg text-gray-300">
+                        Let's structure equity participation that recognizes AI Lab isn't just a project – 
+                        it's the future of Mindgrub, and I'm committed to building it with you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Choose-your-fit Compensation (refined as partnership models) -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Phase 2: Partnership Structures
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Three paths to full-time leadership, each reflecting different beliefs about our future</p>
+            
+            <!-- Context -->
+            <div class="max-w-4xl mx-auto glass rounded-2xl p-8 mb-12">
+                <p class="text-lg text-gray-300 text-center">
+                    After proving value in the contract phase, these structures offer different approaches to my full-time transition. 
+                    Each addresses my $725K retirement gap while creating unique pathways for sharing in AI Lab's success. 
+                    <span class="text-mg-green font-semibold">The right choice depends on how boldly we want to bet on our shared vision.</span>
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Option A -->
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mg-green to-mg-blue rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">A</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-3 text-mg-green">Security Focus – Maximum Cash Compensation</h3>
+                            <div class="mb-4">
+                                <span class="text-3xl font-bold">$190K</span>
+                                <span class="text-gray-400"> base + 20% bonus + benefits + milestone equity</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-mg-green mb-2">Financial Security</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>Fully covers retirement gap</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>Predictable compensation</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>Lower risk for both parties</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-mg-green mb-2">Modest Equity</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>1-5% based on milestones</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>Earned through performance</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-green">•</span>
+                                            <span>Limited upside potential</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-mg-green/10 rounded-lg p-3">
+                                <p class="text-sm text-gray-300">
+                                    <strong>Choose this if:</strong> You want proven expertise with minimal risk and standard employment structure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option B -->
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform ring-2 ring-mg-blue">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mg-blue to-purple-500 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">B</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-3 text-mg-blue">Balanced Partnership – Cash + Meaningful Equity</h3>
+                            <div class="mb-4">
+                                <span class="text-3xl font-bold">$175K</span>
+                                <span class="text-gray-400"> base + 20% bonus + $31K RSU + 5-10% AI Lab equity</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-mg-blue mb-2">Structured Growth</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>Market-competitive base</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>RSUs provide security</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>4-year retention alignment</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-mg-blue mb-2">True Partnership</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>5-10% founding stake</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>Anti-dilution protection</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-blue">•</span>
+                                            <span>Board pathway at scale</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-mg-blue/10 rounded-lg p-3">
+                                <p class="text-sm text-gray-300">
+                                    <strong>Choose this if:</strong> You believe AI Lab will transform Mindgrub and want to share that success fairly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option C -->
+                <div class="glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-mg-amber to-orange-500 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">C</div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-3 text-mg-amber">Transformation Bet – Profit Share + Major Equity</h3>
+                            <div class="mb-4">
+                                <span class="text-3xl font-bold">$175K</span>
+                                <span class="text-gray-400"> base + 20% bonus + 1-3% profit share + 10-15% AI Lab equity</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-mg-amber mb-2">Performance Aligned</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>Direct profit participation</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>Scales with success</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>Unlimited upside potential</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-mg-amber mb-2">Co-Founder Status</h4>
+                                    <ul class="space-y-2 text-gray-300 text-sm">
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>10-15% founding equity</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>Converts to parent equity</span>
+                                        </li>
+                                        <li class="flex items-start space-x-2">
+                                            <span class="text-mg-amber">•</span>
+                                            <span>True wealth creation path</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-mg-amber/10 rounded-lg p-3">
+                                <p class="text-sm text-gray-300">
+                                    <strong>Choose this if:</strong> You see AI Lab becoming the core of Mindgrub and want a true co-creation partnership.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decision Framework -->
+            <div class="mt-12 max-w-4xl mx-auto">
+                <div class="glass-dark rounded-2xl p-8 text-center">
+                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                        More Than Numbers – A Vision for the Future
+                    </h3>
+                    <p class="text-lg text-gray-300">
+                        Each option reflects a different level of belief in what we can build together. 
+                        <br>
+                        <span class="text-xl italic text-mg-green mt-4 block">
+                            "How big do we dare to dream?"
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WordPress AI Solutions Section (keep as is - already strong) -->
+    <section id="wordpress-ai-solutions" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                The Complete AI Toolkit
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Every tool needed to dominate the AI-powered WordPress market</p>
+            
+            <div class="solutions-grid grid lg:grid-cols-3 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <!-- Solution 1: WordPress MCP Server Toolkit -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-mg-green/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🔧</span>
+                            </div>
+                            <span class="solution-badge bg-mg-green/20 text-mg-green px-3 py-1 rounded-full text-sm font-semibold">Universal API</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-mg-green mb-2">WordPress MCP Server Toolkit</h3>
+                        <p class="text-gray-400 text-sm mb-4">Any WordPress site with REST API enabled</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Complete WordPress REST API coverage</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Gutenberg blocks management</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Multi-authentication support</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Static site export functionality</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('mcp-server')" class="bg-mg-green text-black px-4 py-2 rounded-lg font-semibold hover:bg-mg-green/80 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 2: WordPress AI Agent -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-mg-blue/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🤖</span>
+                            </div>
+                            <span class="solution-badge bg-mg-blue/20 text-mg-blue px-3 py-1 rounded-full text-sm font-semibold">Site Generator</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-mg-blue mb-2">WordPress AI Agent</h3>
+                        <p class="text-gray-400 text-sm mb-4">New WordPress sites needing full content generation</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>6+ business-specific templates</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>End-to-end website creation</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>AI image generation & upload</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>SEO optimization & performance</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('ai-agent')" class="bg-mg-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-mg-blue/80 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 3: GMMB Extensions -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-mg-amber/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                            <span class="solution-badge bg-mg-amber/20 text-mg-amber px-3 py-1 rounded-full text-sm font-semibold">Enhanced Integration</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-mg-amber mb-2">GMMB Extensions</h3>
+                        <p class="text-gray-400 text-sm mb-4">WordPress sites needing advanced integrations</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-mg-amber">✓</span><span>HTML/CSS/JS static exporter</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-amber">✓</span><span>WordPress database integrator</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-amber">✓</span><span>AI wizard interface</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-amber">✓</span><span>Content generation engine</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('gmmb-extensions')" class="bg-mg-amber text-black px-4 py-2 rounded-lg font-semibold hover:bg-mg-amber/80 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 4: Multi-Model AI Provider Manager -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">🧠</span>
+                            </div>
+                            <span class="solution-badge bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-semibold">AI Integration</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-purple-400 mb-2">Multi-Model AI Provider</h3>
+                        <p class="text-gray-400 text-sm mb-4">Any WordPress site needing AI-powered content</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>GPT pipeline</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Claude pipeline</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Ollama/Qwen local pipeline</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-purple-400">✓</span><span>Automatic failover & caching</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('ai-provider')" class="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-500/80 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 5: Website Creator Tools -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">✨</span>
+                            </div>
+                            <span class="solution-badge bg-gradient-to-r from-mg-green to-mg-blue text-white px-3 py-1 rounded-full text-sm font-semibold">Site Builders</span>
+                        </div>
+                        <h3 class="text-xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-2">Website Creator Tools</h3>
+                        <p class="text-gray-400 text-sm mb-4">Specific WordPress site types & templates</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Gutenberg-native homepage builder</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>Blue Cactus creative agency template</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-green">✓</span><span>Mindgrub corporate site builder</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-mg-blue">✓</span><span>Howdy World demo site creator</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('website-creator')" class="bg-gradient-to-r from-mg-green to-mg-blue text-white px-4 py-2 rounded-lg font-semibold hover:opacity-80 transition-opacity">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 6: Content Generation Scripts -->
+                <div class="solution-card glass rounded-2xl p-8 hover:scale-105 transition-transform">
+                    <div class="solution-header mb-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl">📝</span>
+                            </div>
+                            <span class="solution-badge bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-sm font-semibold">Content Tools</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-orange-400 mb-2">Content Generation Scripts</h3>
+                        <p class="text-gray-400 text-sm mb-4">Individual content pieces for any WordPress site</p>
+                    </div>
+                    <div class="solution-body">
+                        <div class="capabilities-list mb-6">
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li class="flex items-start space-x-2"><span class="text-orange-400">✓</span><span>SEO-optimized blog post generation</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-orange-400">✓</span><span>Landing & service page creation</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-orange-400">✓</span><span>Multi-language support</span></li>
+                                <li class="flex items-start space-x-2"><span class="text-orange-400">✓</span><span>Custom tone & style adaptation</span></li>
+                            </ul>
+                        </div>
+                        <div class="solution-links">
+                            <button onclick="showProjectDetails('content-generator')" class="bg-orange-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-500/80 transition-colors">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Section -->
+            <div class="mt-16 glass rounded-2xl p-12 text-center max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-4">
+                    Ready to Deploy. Ready to Scale. Ready to Transform.
+                </h3>
+                <p class="text-gray-400 mb-8 text-lg">
+                    A complete ecosystem that positions Mindgrub as the leader in AI-powered WordPress solutions. 
+                    Not promises or prototypes – production-ready tools that generate revenue from day one.
+                </p>
+                <div class="coverage-stats grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="stat-item">
+                        <div class="stat-number text-4xl font-bold text-mg-green mb-2">$1M+</div>
+                        <div class="stat-label text-gray-400">Development Value</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-4xl font-bold text-mg-blue mb-2">6</div>
+                        <div class="stat-label text-gray-400">Complete Solutions</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-4xl font-bold text-mg-amber mb-2">9+</div>
+                        <div class="stat-label text-gray-400">Industry Templates</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number text-4xl font-bold text-purple-400 mb-2">∞</div>
+                        <div class="stat-label text-gray-400">Revenue Potential</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps Section (refined for action) -->
+    <section id="next-steps" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent">
+                Your Decision Points
+            </h2>
+            <p class="text-center text-gray-400 mb-12 text-lg">Clear actions to capture this opportunity</p>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">1</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Approve Contract Structure</h3>
+                        <p class="text-mg-green font-semibold">Today – Start generating revenue in 30 days</p>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-blue to-purple-500 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">2</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Transfer Toolkit to Mindgrub Repos</h3>
+                        <p class="text-mg-blue font-semibold">Week 1 – Immediate deployment capability</p>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-amber to-orange-500 rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">3</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Launch mindgrub.ai</h3>
+                        <p class="text-mg-amber font-semibold">August 8 – Market presence established</p>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-mg-green rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">4</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">First Client Win</h3>
+                        <p class="text-purple-400 font-semibold">September 1 – Momentum builds</p>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-2xl p-6 flex items-center space-x-6 hover:scale-105 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-br from-mg-green to-mg-blue rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">5</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-1">Scale to 20+ Projects</h3>
+                        <p class="text-mg-green font-semibold">Q4 2025 – Full-time transition discussion</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- The Ask -->
+            <div class="text-center mt-16">
+                <div class="glass rounded-2xl p-12 max-w-md mx-auto animate-glow">
+                    <h3 class="text-4xl font-bold bg-gradient-to-r from-mg-green to-mg-blue bg-clip-text text-transparent mb-4">
+                        Ready to Transform Mindgrub?
+                    </h3>
+                    <p class="text-xl text-gray-300 mb-6">The toolkit is ready. The team is ready. The market is ready.</p>
+                    <p class="text-3xl font-bold text-mg-green">Are you?</p>
+                    <p class="text-6xl mt-4">🚀</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (refined) -->
+    <footer class="py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h3 class="text-6xl font-black bg-gradient-to-r from-mg-green via-mg-blue to-mg-green bg-clip-text text-transparent mb-4">
+                Let's Build the Future
+            </h3>
+            <p class="text-gray-400 text-lg mb-8">AI isn't coming. It's here. Let's lead the transformation together.</p>
+            
+            <!-- Action Buttons -->
+            <div class="mt-12 flex flex-wrap justify-center gap-6">
+                <a href="speech-script.html" class="inline-flex items-center space-x-3 glass rounded-2xl px-8 py-4 hover:scale-105 transition-transform group">
+                    <span class="text-2xl">🎤</span>
+                    <div class="text-left">
+                        <h4 class="text-lg font-bold text-mg-green">Presentation Script</h4>
+                        <p class="text-sm text-gray-400">Key talking points for our meeting</p>
+                    </div>
+                </a>
+                
+                <a href="employment-paths.html" class="inline-flex items-center space-x-3 glass rounded-2xl px-8 py-4 hover:scale-105 transition-transform group">
+                    <span class="text-2xl">📊</span>
+                    <div class="text-left">
+                        <h4 class="text-lg font-bold text-mg-blue">Detailed Analysis</h4>
+                        <p class="text-sm text-gray-400">Deep dive into all options</p>
+                    </div>
+                </a>
+                
+                <a href="contractor-fulltime-path.html" class="inline-flex items-center space-x-3 glass rounded-2xl px-8 py-4 hover:scale-105 transition-transform group">
+                    <span class="text-2xl">🤝</span>
+                    <div class="text-left">
+                        <h4 class="text-lg font-bold text-mg-amber">Partnership Path</h4>
+                        <p class="text-sm text-gray-400">From contract to co-creation</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-16 text-gray-500 text-sm">
+                <p>Prepared with conviction by Will F.</p>
+                <p>Because the future belongs to those who build it.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Wait for Chart.js to load
+        function initializeChart() {
+            const ctx = document.getElementById('revPie');
+            if (!ctx || typeof Chart === 'undefined') {
+                // If Chart.js isn't loaded yet, wait and try again
+                setTimeout(initializeChart, 100);
+                return;
+            }
+            
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['AI-Powered Sites', 'AI Audits', 'Optimization'],
+                    datasets: [{
+                        data: [800, 150, 60],
+                        backgroundColor: [
+                            'rgba(0, 210, 106, 0.8)',
+                            'rgba(0, 157, 255, 0.8)', 
+                            'rgba(255, 176, 0, 0.8)'
+                        ],
+                        borderColor: [
+                            '#00d26a',
+                            '#009dff',
+                            '#ffb000'
+                        ],
+                        borderWidth: 3,
+                        hoverBorderWidth: 5,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 25,
+                                font: {
+                                    size: 14,
+                                    weight: '600'
+                                },
+                                color: '#fff',
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            borderColor: '#00d26a',
+                            borderWidth: 1,
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value}K (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '40%'
+                }
+            });
+        }
+
+        // Initialize chart when DOM is ready
+        document.addEventListener('DOMContentLoaded', initializeChart);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // WordPress AI Solutions Project Details
+        function showProjectDetails(projectType) {
+            const projectDetails = {
+                'mcp-server': {
+                    title: 'WordPress MCP Server Toolkit',
+                    description: 'Universal WordPress API wrapper with comprehensive REST API coverage, Gutenberg integration, and multi-model AI support.',
+                    features: [
+                        'Complete WordPress REST API coverage (posts, pages, media, comments, users, menus)',
+                        'Gutenberg blocks and patterns management',
+                        'Multi-authentication support (Basic Auth, JWT, Application Passwords)',
+                        'Multi-model AI integration (GPT, Claude, Ollama/Qwen)',
+                        'Static site export functionality',
+                        'TypeScript-based modular architecture'
+                    ],
+                    path: './wdpress-server-toolkit/',
+                    files: [
+                        'src/index.ts - Server entry point',
+                        'src/lib/posts-server.ts - Posts management',
+                        'src/lib/pages-server.ts - Pages management',
+                        'src/lib/blocks-server.ts - Gutenberg blocks',
+                        'src/lib/generator-server.ts - Content generation'
+                    ]
+                },
+                'ai-agent': {
+                    title: 'WordPress AI Agent',
+                    description: 'Complete website generator with business templates, AI content creation, and image generation.',
+                    features: [
+                        'Business-specific templates (Dental, Restaurant, Law, Real Estate, Spa, Fitness, Auto, Consulting)',
+                        'End-to-end website creation with AI-generated content',
+                        'Professional image generation and upload',
+                        'SEO optimization and performance tuning',
+                        'Web dashboard interface for easy management'
+                    ],
+                    path: './wordpressAgent/',
+                    files: [
+                        'src/wordpress-ai-agent.js - Core agent',
+                        'templates/dental.json - Dental practice template',
+                        'templates/restaurant.json - Restaurant template',
+                        'server.js - Web dashboard interface',
+                        'generate-website.js - Website generator'
+                    ]
+                },
+                'gmmb-extensions': {
+                    title: 'GMMB Extensions',
+                    description: 'Enhanced WordPress integration with static site export, database integration, and AI wizard interface.',
+                    features: [
+                        'HTML/CSS/JS static site exporter (WordPress → Static sites)',
+                        'WordPress database integrator (Static sites → WordPress)',
+                        'AI bot wizard interface for user-friendly AI assistance',
+                        'Content generation engine with custom prompts',
+                        'Project management system for tracking builds'
+                    ],
+                    path: './wdpress-server-toolkit/',
+                    files: [
+                        'src/lib/export-server.ts - Static site export',
+                        'src/lib/integrator-server.ts - Database integration',
+                        'src/lib/wizard-server.ts - AI wizard interface',
+                        'src/lib/generator-server.ts - Content generation'
+                    ]
+                },
+                'ai-provider': {
+                    title: 'Multi-Model AI Provider Manager',
+                    description: 'Unified interface for multiple AI models with automatic failover and cost optimization.',
+                    features: [
+                        'GPT pipelines',
+                        'Claude pipelines',
+                        'AI Lab @Mindgrub local models for privacy-first solutions',
+                        'Automatic failover and intelligent caching',
+                        'Cost optimization algorithms and usage tracking'
+                    ],
+                    path: './wdpress-server-toolkit/docs/',
+                    files: [
+                        'ai-provider-manager-implementation.ts - Provider manager',
+                        'multi-model-integration.md - Integration guide',
+                        'llm-client-usage.md - Usage documentation',
+                        'cost-optimization.md - Cost tracking guide'
+                    ]
+                },
+                'website-creator': {
+                    title: 'Website Creator Tools',
+                    description: 'Specialized site builders for specific WordPress site types and use cases.',
+                    features: [
+                        'Gutenberg-native homepage builder with modern blocks',
+                        'Blue Cactus creative agency template system',
+                        'Mindgrub corporate site builder with branding',
+                        'Howdy World demo site creator for testing',
+                        'Responsive design templates with mobile optimization'
+                    ],
+                    path: './wdpress-server-toolkit/website-creator/',
+                    files: [
+                        'create-gutenberg-homepage.js - Homepage builder',
+                        'create-blue-cactus-site.js - Creative agency template',
+                        'create-mindgrub-enhanced.js - Corporate site builder',
+                        'create-howdy-world-v2.js - Demo site creator'
+                    ]
+                },
+                'content-generator': {
+                    title: 'Content Generation Scripts',
+                    description: 'Standalone tools for generating individual content pieces with SEO optimization.',
+                    features: [
+                        'SEO-optimized blog post generation with keywords',
+                        'Landing page and service page creation',
+                        'Multi-language support for global content',
+                        'Custom tone and style adaptation for brands',
+                        'Automated meta descriptions and social media snippets'
+                    ],
+                    path: './wdpress-server-toolkit/',
+                    files: [
+                        'content-generator.js - Main content generator',
+                        'generated-content/ - Output directory structure',
+                        'docs/ai-content-generation.md - Documentation',
+                        'templates/content-templates.json - Content templates'
+                    ]
+                }
+            };
+
+            const project = projectDetails[projectType];
+            if (!project) return;
+
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'project-modal fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="modal-content bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative border border-gray-700">
+                    <div class="modal-header p-6 border-b border-gray-700 flex justify-between items-center sticky top-0 bg-gray-900 rounded-t-2xl">
+                        <h2 class="text-3xl font-bold text-white">${project.title}</h2>
+                        <button onclick="closeProjectModal()" class="close-btn text-gray-400 hover:text-white text-3xl font-bold w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-800 transition-colors">&times;</button>
+                    </div>
+                    <div class="modal-body p-6">
+                        <p class="project-description text-lg text-gray-300 mb-6">${project.description}</p>
+                        <div class="project-path bg-gray-800 border-l-4 border-mg-green p-4 mb-6 rounded">
+                            <strong class="text-gray-200">Repository Path:</strong> <code class="bg-gray-700 px-2 py-1 rounded font-mono text-sm text-mg-green">${project.path}</code>
+                        </div>
+                        <div class="project-features mb-6">
+                            <h3 class="text-xl font-bold text-white mb-4">Key Features:</h3>
+                            <ul class="space-y-3">
+                                ${project.features.map(feature => `
+                                    <li class="flex items-start space-x-3 p-3 bg-gray-800 rounded-lg border-l-4 border-mg-blue">
+                                        <span class="text-mg-green font-bold">✓</span>
+                                        <span class="text-gray-300">${feature}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        <div class="project-files">
+                            <h3 class="text-xl font-bold text-white mb-4">Key Files:</h3>
+                            <ul class="space-y-2">
+                                ${project.files.map(file => `
+                                    <li class="bg-gray-800 p-3 rounded-lg">
+                                        <code class="text-mg-amber font-mono text-sm">${file}</code>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+            
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+            
+            // Close on backdrop click
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeProjectModal();
+                }
+            });
+        }
+
+        function closeProjectModal() {
+            const modal = document.querySelector('.project-modal');
+            if (modal) {
+                modal.remove();
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeProjectModal();
+            }
+        });
+    </script>
+</body>
+</html>
